@@ -1,6 +1,6 @@
-## Webpack 4 starter
+## proka4show.ru
 
-To start development of new landing site
+frontend
 
 ````
 npm i
