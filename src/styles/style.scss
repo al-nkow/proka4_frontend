@@ -1,33 +1,23 @@
 @import 'colors';
+@import 'main';
 
-@font-face {
-  font-family:'Bebas_Neue_Bold';
-  src: url('../fonts/Bebas_Neue_Bold_Regular.eot');
-  src: url('../fonts/Bebas_Neue_Bold_Regular.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/Bebas_Neue_Bold_Regular.woff2') format('woff2'),
-  url('../fonts/Bebas_Neue_Bold_Regular.woff') format('woff'),
-  url('../fonts/Bebas_Neue_Bold_Regular.svg#Bebas_Neue_Bold_Regular') format('svg');
-  font-weight: 700;
-  font-style: normal;
-  font-stretch: normal;
-  unicode-range: U+0020-0451;
+@mixin gradient {
+  background-image: -moz-linear-gradient( 22deg, rgb(250,127,76) 0%, rgb(251,51,96) 100%);
+  background-image: -webkit-linear-gradient( 22deg, rgb(250,127,76) 0%, rgb(251,51,96) 100%);
+  background-image: -ms-linear-gradient( 22deg, rgb(250,127,76) 0%, rgb(251,51,96) 100%);
 }
-body {
-  font-family: 'Ubuntu', 'Helvetica', sans-serif;
-  color: #333333;
-  padding-top: 77px;
+
+@mixin abs-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
-//.title {
-//  color: $main;
-//  border: 1px solid #cccccc;
-//  padding: 5px;
-//  margin: 20px;
-//  border-radius: 4px;
-//  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
-//}
+
 // ======= NAVIGATION =======
 .navigation {
-  z-index: 1;
+  z-index: 10;
   background: #ffffff;
   .container {
     display: flex;
@@ -123,7 +113,7 @@ body {
   overflow: hidden;
 }
 .main-wrapper {
-  height: 800px;
+  height: 780px;
   position: relative;
 }
 .main-girls {
@@ -231,6 +221,22 @@ body {
 .white-block {
   min-height: 600px;
   background: $bgLight;
+  position: relative;
+}
+.wave-top {
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  left: 0;
+  fill: $bgLight;
+}
+.wave-bottom {
+  z-index: 2;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  fill: $bgLight;
 }
 .about-wrap {
   padding: 100px 0;
@@ -241,5 +247,208 @@ body {
   border: 14px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 0 59px 8px rgba( 255, 121, 87, 0.2 );
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    .about-img-ovl {
+      background: rgba(0,0,0,0.2);
+    }
+    .play {
+      background: rgba(255,255,255,0.7);
+    }
+  }
 }
+.about-img-ovl {
+  transition: all 0.2s linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.play {
+  transition: all 0.2s linear;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.5);
+  &:after {
+    content: '';
+    width: 0; height: 0;
+    border-top: 15px solid transparent;
+    border-left: 30px solid $pink;
+    border-bottom: 15px solid transparent;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%, -50%);
+  }
+}
+.about-left {
+  position: relative;
+  display: inline-block;
+}
+.arr-desc {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.desc {
+  position: absolute;
+  font-size: 19px;
+  width: 180px;
+  z-index: 1;
+  text-align: left;
+  top: -28px;
+  left: 16px;
+  transform: rotate(-6deg);
+  font-style: italic;
+  line-height: 22px;
+}
+.about-prize {
+  transform: skewX(-8deg) rotate(-6deg);
+  text-align: left;
+  position: absolute;
+  background: #ffffff;
+  padding: 20px 40px;
+  bottom: -37px;
+  right: 0;
+  box-shadow: 0 0 59px 8px rgba( 255, 121, 87, 0.2 );
+  &__title {
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: bold;
+  }
+  &__sum {
+    margin-left: -8px;
+    font-style: normal;
+    font-size: 72px;
+    line-height: 72px;
+    height: 68px;
+    font-family: 'Bebas_Neue_Bold', Helvetica, sans-serif;
+    color: $million;
+    .rub {
+      font-size: 69px;
+      font-family: 'Ubuntu', 'Helvetica', sans-serif;
+    }
+  }
+  &__notice {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+.about-right {
+  padding: 20px 40px;
+}
+.awards {
+  margin: 25px 0 55px 0;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  font-style: italic;
+  color: $light;
+  font-weight: 300;
+  &__icon {
+    height: 46px;
+    margin-right: 20px;
+  }
+  &__name {
+    font-style: normal;
+    color: $diamond;
+    display: inline-block;
+    margin-right: 5px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+.about-ball {
+  z-index: 3;
+  @include gradient;
+  border-radius: 50%;
+  position: absolute;
+  &.top {
+    width: 54px;
+    height: 54px;
+    top: -41px;
+    right: -10px;
+  }
+  &.bottom {
+    width: 154px;
+    height: 154px;
+    bottom: -205px;
+    right: -80px;
+  }
+}
+// ======= BENEFITS =======
+.black-block {
+  overflow: hidden;
+  position: relative;
+  min-height: 600px;
+  background: $dark;
+  color: #ffffff;
+  &__background {
+    @include abs-full;
+    z-index: 1;
+  }
+  &__content {
+    @include abs-full;
+    z-index: 2;
+  }
+}
+.rounds {
+  border-radius: 50%;
+  border: 2px solid #1b1c1d;
+  position: absolute;
+  &:after {
+    content: '';
+    border-radius: 50%;
+    height: 82%;
+    width: 82%;
+    border: 2px solid #1b1c1d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  &.bottom {
+    width: 700px;
+    height: 700px;
+    left: 100%;
+    top: 100%;
+    transform: translate(-70%, -60%);
+  }
+  &.top {
+    width: 700px;
+    height: 700px;
+    right: 100%;
+    bottom: 100%;
+    transform: translate(60%, 70%);
+  }
+}
+.benefits {
+  padding: 120px 0;
+}
+.ben-img-wrap {
+  border-radius: 50%;
+  width: 242px;
+  height: 242px;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ben-img {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+
 
