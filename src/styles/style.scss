@@ -224,6 +224,7 @@
   position: relative;
 }
 .wave-top {
+  z-index: 1;
   position: absolute;
   bottom: 100%;
   width: 100%;
@@ -388,19 +389,20 @@
 .black-block {
   overflow: hidden;
   position: relative;
-  min-height: 600px;
+  //min-height: 1000px;
   background: $dark;
   color: #ffffff;
   &__background {
     @include abs-full;
     z-index: 1;
   }
-  &__content {
-    @include abs-full;
-    z-index: 2;
-  }
+  //&__content {
+    //@include abs-full;
+    //z-index: 2;
+  //}
 }
 .rounds {
+  z-index: -1;
   border-radius: 50%;
   border: 2px solid #1b1c1d;
   position: absolute;
@@ -433,8 +435,12 @@
 .benefits {
   padding: 120px 0;
 }
+.benefit {
+  z-index: 2;
+  margin: 35px 10px;
+}
 .benefits-block {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   display: inline-block;
   position: relative;
   &:before {
@@ -451,19 +457,80 @@
     @include gradient;
     position: absolute;
   }
-  &.style1 {
-    &:before {
-      width: 150px;
-      height: 150px;
-      bottom: 22px;
-      left: -30px;
-    }
-    &:after {
-      width: 64px;
-      height: 64px;
-      top: 5px;
-      right: 25px;
-    }
+}
+.style1 {
+  &:before {
+    width: 150px;
+    height: 150px;
+    bottom: 22px;
+    left: -30px;
+  }
+  &:after {
+    width: 64px;
+    height: 64px;
+    top: 5px;
+    right: 25px;
+  }
+}
+.style2 {
+  &:before {
+    width: 150px;
+    height: 150px;
+    bottom: 22px;
+    left: -6px;
+  }
+  &:after {
+    display: none
+  }
+}
+.style3 {
+  &:before {
+    display: none;
+  }
+  &:after {
+    width: 124px;
+    height: 124px;
+    top: 20px;
+    right: 0;
+  }
+}
+.style4 {
+  &:before {
+    width: 64px;
+    height: 64px;
+    top: 29px;
+    left: 7px;
+  }
+  &:after {
+    width: 124px;
+    height: 124px;
+    bottom: 20px;
+    right: 0;
+  }
+}
+.style5 {
+  &:before {
+    display: none;
+  }
+  &:after {
+    width: 124px;
+    height: 124px;
+    bottom: 20px;
+    right: 0;
+  }
+}
+.style6 {
+  &:before {
+    width: 64px;
+    height: 64px;
+    top: 28px;
+    left: 21px;
+  }
+  &:after {
+    width: 160px;
+    height: 160px;
+    bottom: 9px;
+    right: -13px;
   }
 }
 .ben-img-wrap {
@@ -486,11 +553,33 @@
 }
 .ben-notice {
   max-width: 320px;
-  padding-left: 120px;
+  padding-left: 91px;
   text-align: left;
   font-size: 16px;
   font-weight: 300;
   line-height: 20px;
+}
+.ben-title {
+  display: inline-block;
+  text-align: left;
+  background: #ffffff;
+  padding: 14px 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  font-size: 24px;
+  line-height: 28px;
+  color: $darkRed;
+  font-weight: bold;
+  transform: skewX(-8deg) rotate(-6deg);
+}
+.ben-head {
+  margin-bottom: 40px;
+}
+// ======= PRIZES =======
+.prizes {
+  padding: 60px 0;
 }
 
 
