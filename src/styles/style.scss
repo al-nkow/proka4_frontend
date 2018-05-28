@@ -552,6 +552,8 @@
   background-position: center;
 }
 .ben-notice {
+  position: relative;
+  z-index: 1;
   max-width: 320px;
   padding-left: 91px;
   text-align: left;
