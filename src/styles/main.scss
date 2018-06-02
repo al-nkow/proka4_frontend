@@ -44,6 +44,7 @@ p {
   }
 }
 .button {
+  text-align: center;
   transition: all 0.1s linear;
   cursor: pointer;
   display: inline-block;
@@ -60,6 +61,8 @@ p {
     box-shadow: 5px 8.66px 35px 8px rgba( 247, 90, 42, 0.1 );
   }
   &.dark {
+    padding-left: 50px;
+    padding-right: 50px;
     background-image: -moz-linear-gradient( 20deg, rgb(254,128,69) 0%, rgb(255,138,83) 36%, rgb(255,147,97) 100%);
     background-image: -webkit-linear-gradient( 20deg, rgb(254,128,69) 0%, rgb(255,138,83) 36%, rgb(255,147,97) 100%);
     background-image: -ms-linear-gradient( 20deg, rgb(254,128,69) 0%, rgb(255,138,83) 36%, rgb(255,147,97) 100%);
@@ -69,5 +72,11 @@ p {
       background-image: -ms-linear-gradient( 180deg, rgb(254,128,69) 0%, rgb(255,138,83) 50%, rgb(255,147,97) 100%);
     }
   }
+  &.point {
+    background-image: -moz-linear-gradient( 20deg, rgb(254,78,69) 0%, rgb(255,113,83) 36%, rgb(255,147,97) 100%);
+    background-image: -webkit-linear-gradient( 20deg, rgb(254,78,69) 0%, rgb(255,113,83) 36%, rgb(255,147,97) 100%);
+    background-image: -ms-linear-gradient( 20deg, rgb(254,78,69) 0%, rgb(255,113,83) 36%, rgb(255,147,97) 100%);
+  }
 }
+
 

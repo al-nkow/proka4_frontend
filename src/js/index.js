@@ -1,4 +1,5 @@
 import {last} from './last';
+import 'bootstrap/dist/js/bootstrap.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/style.scss';
 import 'ubuntu-fontface/_ubuntu.scss'
