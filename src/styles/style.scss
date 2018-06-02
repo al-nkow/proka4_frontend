@@ -404,38 +404,38 @@
     //@include abs-full;
     //z-index: 2;
   //}
-}
-.rounds {
-  z-index: -1;
-  border-radius: 50%;
-  border: 2px solid #1b1c1d;
-  position: absolute;
-  &:after {
-    content: '';
-    border-radius: 50%;
-    height: 82%;
-    width: 82%;
-    border: 2px solid #1b1c1d;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-  }
-  &.bottom {
-    width: 700px;
-    height: 700px;
-    left: 100%;
-    top: 100%;
-    transform: translate(-70%, -60%);
-  }
-  &.top {
-    width: 700px;
-    height: 700px;
-    right: 100%;
-    bottom: 100%;
-    transform: translate(60%, 70%);
-  }
-}
+}.rounds {
+   z-index: -1;
+   border-radius: 50%;
+   border: 2px solid #1b1c1d;
+   position: absolute;
+   &:after {
+     content: '';
+     border-radius: 50%;
+     height: 82%;
+     width: 82%;
+     border: 2px solid #1b1c1d;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+   }
+   &.bottom {
+     width: 700px;
+     height: 700px;
+     left: 100%;
+     top: 100%;
+     transform: translate(-70%, -60%);
+   }
+   &.top {
+     width: 700px;
+     height: 700px;
+     right: 100%;
+     bottom: 100%;
+     transform: translate(60%, 70%);
+   }
+ }
+
 .benefits {
   padding: 120px 0;
 }
@@ -708,13 +708,152 @@
 .prize3 {
   left: 10%;
   top: 80%;
-  //transform: translate(-50%, 0);
 }
 .prize4 {
   right: 10%;
   top: 80%;
-  //transform: translate(-50%, 0);
 }
-
+// ======= PRIZES =======
+.teachers {
+  padding: 100px 0;
+  background: url('../img/teachersbg.jpg') top center;
+  background-size: cover;
+  overflow: hidden;
+}
+.teachers-head {
+  color: #ffffff;
+  margin-bottom: 100px;
+}
+.teacher-block {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: row;
+  max-width: 876px;
+  margin-bottom: 100px;
+}
+.teacher-img-wrap {
+  position: relative;
+  z-index: 2;
+  border-radius: 50%;
+  width: 285px;
+  height: 285px;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.teacher-img {
+  width: 92%;
+  height: 92%;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+.teacher-contacts {
+  margin-top: -95px;
+}
+.teacher-icons-wrap {
+  text-align: center;
+}
+.teacher-icon {
+  width: 24px;
+  height: 24px;
+  fill: $iconOrange;
+  margin: 12px;
+  cursor: pointer;
+  &:hover {
+    fill: #f6786a;
+  }
+}
+.teachers-header {
+  margin-bottom: 20px;
+}
+.teacher-info {
+  margin-bottom: 20px;
+}
+.daria-left {
+  flex: none;
+  .teacher-contacts {
+    padding-right: 20px;
+  }
+}
+.daria-right {
+  position: relative;
+}
+.teacher-main {
+  .button {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+.sasha-left {
+  position: relative;
+  text-align: right;
+  .teacher-main {
+    .button {
+      left: inherit;
+      right: 0;
+    }
+  }
+}
+.sasha-right {
+  flex: none;
+  .teacher-contacts {
+    padding-left: 20px;
+  }
+}
+.teacher-row {
+  display: flex;
+  &.left {
+    justify-content: flex-start;
+  }
+  &.right {
+    justify-content: flex-end;
+  }
+}
+.teachers-background {
+  position: relative;
+  z-index: 1;
+}
+.teacher-rounds {
+  z-index: -1;
+  border-radius: 50%;
+  border: 2px solid #ea7468;
+  position: absolute;
+  &:after {
+    content: '';
+    border-radius: 50%;
+    height: 82%;
+    width: 82%;
+    border: 2px solid #ea7468;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  &.top {
+    width: 760px;
+    height: 760px;
+    left: 100%;
+    bottom: 100%;
+    transform: translate(-65%, 55%);
+  }
+  &.bottom {
+    width: 760px;
+    height: 760px;
+    right: 100%;
+    top: 100%;
+    transform: translate(80%, -50%);
+    border-color: #e0594c;
+    &:after {
+      border-color: #e0594c;
+    }
+  }
+}
 
 
