@@ -404,8 +404,8 @@ html
           .fame-slider-wrap
             div(id="carouselFame" class="carousel slide" data-ride="carousel" data-interval="false")
               .carousel-inner
+                // ================= SLIDE 1 =================
                 .carousel-item.active
-                  // ================= SLIDE 1 =================
                   .fame-slide
                     .fame-card
                       .fame-photo-wrap
@@ -423,9 +423,9 @@ html
                         | где очень теплая атмосфера и Мощная мотивация. @dasha-pirozhkova и @sashakabaeva_official , спасибо,
                         | что Вы есть, создатели единственной в своём роде Школы перемен для женщин"
                       .button.point(data-toggle="modal" data-target="#velikayaResults") Смотреть до/после
-                  // =========================================
+                // ===========================================
+                // ================= SLIDE 2 =================
                 .carousel-item
-                  // ================= SLIDE 2 =================
                   .fame-slide
                     .fame-card
                       .fame-photo-wrap
@@ -443,9 +443,9 @@ html
                         | со мной произошли такие изменения! Я изменилась и моя жизнь стала ярче!&#8194;
                         | Девочки спасибо Вам за вашу поддержку, за ваше внимание и спасибо вам за PROkaчSHOW!&#8194;
                       .button.point(data-toggle="modal" data-target="#belozertcevaResults") Смотреть до/после
-                  // =========================================
+                // ===========================================
+                // ================= SLIDE 3 =================
                 .carousel-item
-                  // ================= SLIDE 3 =================
                   .fame-slide
                     .fame-card
                       .fame-photo-wrap
@@ -464,7 +464,7 @@ html
                         | к этому. Я изменилась как внутри так и снаружи! Спасибо вам, девочки, за мотивацию,
                         | познавательные лекции, эффективные тренировки, за поддержку во всём!"
                       .button.point(data-toggle="modal" data-target="#kupriyanovaResults") Смотреть до/после
-                  // =========================================
+                // ===========================================
             a.carousel-control-prev(href="#carouselFame" role="button" data-slide="prev")
               svg.slider-arr(viewBox="0 0 129 129")
                 g
@@ -525,30 +525,40 @@ html
           .sub-title Мы собрали ответы почти на все возможные вопросы.<br/>Но если у тебя возникли трудности, то можешь <a href="mailto:prokachshow@gmail.com">задать вопрос нам лично!<a/>
 
           .questions-wrap
-            div(id="faq")
+            include faq.pug
+          .faq-footer
+            a.button.point(href="mailto:prokachshow@gmail.com") Задать свой вопрос
+            .show-more Показать еще вопросы
+    // =============== FOOTER ===============
+    .footer
+      .container
+        .row
+          .col-sm-4
+            img.foot-logo(src=require("./img/foot-logo.png"))
+            .foot-block
+              div <b>ИНН</b> 7722416593
+              div <b>ОГРН</b> 5177746148069
+            .foot-block
+              div <b>Адрес:</b>
+              div 111116, г.Москва, ул. Авиамоторная, д.4, корп.2, пом. IV, комната 2
+            .foot-block
+              div <b>Телефон/Факс:</b>
+              div 8 (495) 231-49-09
+            .foot-block
+              div <b>Эл.почта:</b>
+              a(href="mailto:prokachshow@gmail.com") prokachshow@gmail.com
+          .col-sm-4
+            .foot-col-title Полезные ссылки
+            .foot-link Преподаватели
+            .foot-link Советы от школы
+            .foot-link Акции
+            .foot-link Политика защиты и обработки<br/>персональных данных
+            .foot-link Оферта
+          .col-sm-4
+            .foot-col-title Instagram
+    .underFooter
+      span © 2018 Он-лайн школа перемен для женщин PROкачSHOW
 
-
-
-              div.card
-                div.q-header(id="headingOne")
-                  .question(data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne")
-                    | У меня нет возможности оплатить участие картой, возможно ли произвести оплату иными способами?
-                div.collapse.show(id="collapseOne" aria-labelledby="headingOne" data-parent="#faq")
-                  .answer
-                    | Да, конечно! В этом случае необходимо написать на электронную почту проекта
-                    | <a href="mailto:prokachshow@gmail.com">prokachshow@gmail.com<a/> для предварительной регистрации и выбора удобного способа оплаты
-
-
-
-              div.card
-                div.card-header(id="headingTwo")
-                  h5.mb-0
-                    button.btn.btn-link(data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo") Разворачиваемая панель #1
-                div(id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#faq")
-                  div.card-body
-                    span
-                      | Да, конечно! В этом случае необходимо написать на электронную почту проекта
-                      | prokachshow@gmail.com для предварительной регистрации и выбора удобного способа оплаты
 
 
 
