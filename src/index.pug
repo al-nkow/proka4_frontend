@@ -399,7 +399,7 @@ html
     .black-block
       .fame-block
         .container
-          h3.text-center Доска почета
+          h3.text-center Доска почёта
           .block-head-divider
           .fame-slider-wrap
             div(id="carouselFame" class="carousel slide" data-ride="carousel" data-interval="false")
@@ -439,9 +439,9 @@ html
                       .fame-place <span>4 место</span> / 9 сезон
                     .fame-info
                       .fame-info-title "Я самая счастливая - 33кг!
-                      .fame-info-notice Как же я счастлива что попала в проект, ведь это благодаря ему
-                        | со мной произошли такие изменения! Я изменилась и моя жизнь стала ярче!
-                        | Девочки спасибо Вам за вашу поддержку, за ваше внимание и спасибо вам за PROkaчSHOW!
+                      .fame-info-notice Как же я счастлива что попала в проект, ведь это благодаря ему&#8194;
+                        | со мной произошли такие изменения! Я изменилась и моя жизнь стала ярче!&#8194;
+                        | Девочки спасибо Вам за вашу поддержку, за ваше внимание и спасибо вам за PROkaчSHOW!&#8194;
                       .button.point(data-toggle="modal" data-target="#belozertcevaResults") Смотреть до/после
                   // =========================================
                 .carousel-item
@@ -455,7 +455,7 @@ html
                           include instagram.pug
                         .fame-photo-back
                           .fame-img(style="background-image: url(" + require("./img/kupriyanova.jpg") + ")")
-                      .fame-name Марианна куприянова
+                      .fame-name Марианна Куприянова
                       .fame-place <span>1 место</span> / 9 сезон
                     .fame-info
                       .fame-info-title "Раньше считала, что правильное питание это очень тяжело,
@@ -482,7 +482,77 @@ html
         .news-block
           h3.text-center Акции и главные новости
           .block-head-divider
-          .news-wrap
+          .news-slider
+            .news-wrap.newsSiema
+              a.news-item(href="https://www.instagram.com/p/BjaMOErl741/?r=wa1" target="_blank")
+                img(src=require("./img/news1.jpg"))
+                .news-body
+                  .news-date 01 июня 2018, 15:10
+                  .news-title Со 2 по 6 июня Прокачшоу на семейном форуме в Сочи
+              a.news-item(href="https://www.instagram.com/p/BikLRiFFVPK/?r=wa1" target="_blank")
+                img(src=require("./img/news4.jpg"))
+                .news-body
+                  .news-date 09 мая 2018, 22:20
+                  .news-title Прокачшоу и НАС прошли в Бессмертном полку 9 мая
+              a.news-item(href="https://www.instagram.com/p/BiaGYCnl4_v/?r=wa1" target="_blank")
+                img(src=require("./img/news3.jpg"))
+                .news-body
+                  .news-date 05 мая 2018, 21:00
+                  .news-title Проведена первая благотворительная тренировка
+              a.news-item(href="https://www.instagram.com/p/BiUrAKelzBP/?r=wa1" target="_blank")
+                img(src=require("./img/news2.jpg"))
+                .news-body
+                  .news-date 03 мая 2018, 19:00
+                  .news-title 5 мая стартуют бесплатные тренировки Прокачшоу в Москве!
+            .news-controls.news-prev
+              svg.slider-arr(viewBox="0 0 129 129")
+                g
+                  path(d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z")
+              span.sr-only Previous
+            .news-controls.news-next
+              svg.slider-arr(viewBox="0 0 129 129")
+                g
+                  path(d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z")
+              span.sr-only Next
+    // =============== FAQ ===============
+    .white-block
+      svg.wave-bottom(x="0px" y="0px" viewBox="0 1557.3 2834.6 120.5")
+        path(d="M2350.2,1639.4c-360.6-49.3-516.3-7.4-654.7,4.2s-327.8,6-522.5-34.6c-194.8-40.6-428.4-61.6-657,26.5c-228.6,88.1-363.4,17.8-516-22.4c0-36.5,0.7-12,0.7-57c785.5,3.2,2481.1,0.2,2833.3-0.9c0,30.9,0.7,29.8,0.7,43.6C2747.7,1636.6,2588.9,1671.9,2350.2,1639.4z")
+      .container
+        .faq-block
+          h3.text-center Часто задаваемые вопросы
+          .block-head-divider
+          .sub-title Мы собрали ответы почти на все возможные вопросы.<br/>Но если у тебя возникли трудности, то можешь <a href="mailto:prokachshow@gmail.com">задать вопрос нам лично!<a/>
+
+          .questions-wrap
+            div(id="faq")
+
+
+
+              div.card
+                div.q-header(id="headingOne")
+                  .question(data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne")
+                    | У меня нет возможности оплатить участие картой, возможно ли произвести оплату иными способами?
+                div.collapse.show(id="collapseOne" aria-labelledby="headingOne" data-parent="#faq")
+                  .answer
+                    | Да, конечно! В этом случае необходимо написать на электронную почту проекта
+                    | <a href="mailto:prokachshow@gmail.com">prokachshow@gmail.com<a/> для предварительной регистрации и выбора удобного способа оплаты
+
+
+
+              div.card
+                div.card-header(id="headingTwo")
+                  h5.mb-0
+                    button.btn.btn-link(data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo") Разворачиваемая панель #1
+                div(id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#faq")
+                  div.card-body
+                    span
+                      | Да, конечно! В этом случае необходимо написать на электронную почту проекта
+                      | prokachshow@gmail.com для предварительной регистрации и выбора удобного способа оплаты
+
+
+
+
 
 
 
