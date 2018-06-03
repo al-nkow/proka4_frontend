@@ -73,10 +73,118 @@ p {
     }
   }
   &.point {
+    transition: none;
     background-image: -moz-linear-gradient( 20deg, rgb(254,78,69) 0%, rgb(255,113,83) 36%, rgb(255,147,97) 100%);
     background-image: -webkit-linear-gradient( 20deg, rgb(254,78,69) 0%, rgb(255,113,83) 36%, rgb(255,147,97) 100%);
     background-image: -ms-linear-gradient( 20deg, rgb(254,78,69) 0%, rgb(255,113,83) 36%, rgb(255,147,97) 100%);
+    &:hover {
+      background: #f65f4d;
+    }
   }
+}
+.modal-content {
+  border: none;
+}
+.mod-head {
+  position: relative;
+  padding: 40px 40px 20px 40px;
+  h3 {
+    font-weight: 500;
+  }
+  .block-head-divider {
+    margin-top: 12px;
+    background: #FF5C58;
+  }
+}
+.close-but {
+  transition: all 0.2s linear;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    font-size: 40px;
+  }
+  &:hover {
+    background: rgba(0,0,0,0.1);
+  }
+}
+.modal-slider {
+  max-width: 70%;
+  margin: 0 auto;
+  position: relative;
+  .carousel-control-prev {
+    top: 210px;
+    left: auto;
+    right: 100%;
+    margin-right: 30px;
+    transition: all 0.2s linear;
+    width: 80px;
+    height: 80px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 20px rgba(0,0,0,.5);
+    .slider-arr {
+      margin-left: -4px;
+    }
+    &:focus {
+      opacity: 0.5;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .carousel-control-next {
+    top: 210px;
+    right: auto;
+    left: 100%;
+    margin-left: 30px;
+    transition: all 0.2s linear;
+    width: 80px;
+    height: 80px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 20px rgba(0,0,0,.5);
+    .slider-arr {
+      margin-right: -4px;
+    }
+    &:focus {
+      opacity: 0.5;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+.modal-dialog {
+  &.custom-width {
+    max-width: 600px;
+  }
+}
+.modal-wave {
+  position: relative;
+  svg {
+    display: block;
+    width: 100%;
+    fill: #FF5B58;
+  }
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+  margin-top: -65px;
+}
+.modal-wave-result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #ffffff;
+  font-size: 22px;
 }
 
 
