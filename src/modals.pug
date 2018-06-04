@@ -128,3 +128,78 @@
         svg(x="0px" y="0px" viewBox="0 0 743 187")
           path(d="M-506.1,19.8c0,0,78.6-25.9,256-1c177.3,24.9,253.9,3.6,322.1-2  c68.1-5.6,161.2-3,257,17c95.8,20,210.8,30.3,323.1-13c112.3-43.3,178.8-8.8,253.8,11c75,19.8,82.9,19.6,98.1,18  c15.2-1.6,87.5,156.1,87.5,156.1s-1695.1-11.3-1682.9-21C-579.2,175.3-506.1,19.8-506.1,19.8z")
         .modal-wave-result - 8 килограмм
+// ==================================================
+// ==================================================
+.modal.fade(id="videoPresentation" tabindex="-1" role="dialog" aria-labelledby="videoPresentationLabel" aria-hidden="true")
+  .modal-dialog.custom-width.modal-dialog-centered(role="document")
+    .modal-content
+      .mod-body
+        .video-wrap
+          .close-but(data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+          iframe.presentation(
+            src="https://www.youtube.com/embed/x--rvICd6Ac?rel=0&amp;controls=1&amp;showinfo=0"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+            )
+// ==================================================
+// ==================================================
+.modal.fade(id="priceModal" tabindex="-1" role="dialog" aria-labelledby="priceModalLabel" aria-hidden="true")
+  .modal-dialog.custom-width.modal-dialog-centered(role="document")
+    .modal-content
+      .mod-head
+        .close-but(data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+        h3.text-center Введите личные данные
+        .block-head-divider
+      .modal-body.pay-modal
+        // ++++++++++++++++++++++++++
+        form#selectPriceForm
+          .form-group
+            p.popupdesc * ВНИМАНИЕ! Поля имя, фамилия и адрес эл. почты заполняются без пробелов!
+          .row
+            .col-sm-6
+              .form-group
+                label(for='pieFirstName') Имя участницы
+                input#pieFirstName.form-control(name='firstname', type='text', placeholder='Введите имя')
+            .col-sm-6
+              .form-group
+                label(for='pieLastName') Фамилия участницы
+                input#pieLastName.form-control(name='lastname', type='text', placeholder='Введите фамилию')
+          .form-group
+            label
+              | Контактные данные, необходимые для направления дальнейших инструкций по участию в
+              | конкурсе (будут направлены до официального старта сезона):
+          .row
+            .col-sm-6
+              .form-group
+                label(for='piePhone') Телефон
+                input#piePhone.form-control(name='phone', type='text', placeholder='Введите номер телефона')
+            .col-sm-6
+              .form-group
+                label(for='pieEmail') Email
+                input#pieEmail.form-control(name='email', type='text', placeholder='Введите адрес электронной почты')
+          .form-group
+            label(for='piePromo') Кодовое слово (при наличии)
+            input#piePromo.form-control(name='promo', type='text', placeholder='Введите кодовое слово')
+          .form-group
+            .checkbox
+              label
+                input#pieOffer.cbinp(type='checkbox')
+                |  Я принимаю условия
+                a.cblabel(href='./docs/offer.pdf', target='_blank') оферты
+                | .
+          .form-group
+            label
+              | Информация по участию в конкурсе будет направлена на адрес электронной почты,
+              | указанной участницей в настоящей заявке, в течение 48 часов после оплаты.
+              | Вопросы о статусе  заявки и все вопросы по оплате и участию просим направлять на
+              | электронную почту
+              a.cblabel(href='mailto:prokachshow@gmail.com') prokachshow@gmail.com
+              | .
+              | Ответим на все возникшие вопросы в течение 24 часов.
+      .modal-footer
+        span.modal-button.cancel(data-dismiss='modal') Отмена
+        span#submitPriceForm.modal-button.confirm.mlm.disabled Оплатить
+

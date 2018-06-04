@@ -67,6 +67,8 @@ p {
     background-image: -webkit-linear-gradient( 20deg, rgb(254,128,69) 0%, rgb(255,138,83) 36%, rgb(255,147,97) 100%);
     background-image: -ms-linear-gradient( 20deg, rgb(254,128,69) 0%, rgb(255,138,83) 36%, rgb(255,147,97) 100%);
     &:hover {
+      color: #ffffff;
+      text-decoration: none;
       background-image: -moz-linear-gradient( 180deg, rgb(254,128,69) 0%, rgb(255,138,83) 50%, rgb(255,147,97) 100%);
       background-image: -webkit-linear-gradient( 180deg, rgb(254,128,69) 0%, rgb(255,138,83) 50%, rgb(255,147,97) 100%);
       background-image: -ms-linear-gradient( 180deg, rgb(254,128,69) 0%, rgb(255,138,83) 50%, rgb(255,147,97) 100%);
