@@ -1295,8 +1295,8 @@
 .reviews-bg {
   opacity: 0.1;
   margin: 0 auto;
-  width: 60%;
-  padding-top: 60%;
+  width: 61%;
+  padding-top: 61%;
   position: relative;
   &:after {
     border-radius: 50%;
@@ -1369,6 +1369,16 @@
     &:hover {
       opacity: 1;
     }
+    @media (max-width: 670px) {
+      margin-right: 20px;
+    }
+    @media (max-width: 553px) {
+      margin-right: 0;
+      right: auto;
+      left: 0;
+      width: 50px;
+      height: 50px;
+    }
   }
   .carousel-control-next {
     bottom: 50%;
@@ -1387,6 +1397,16 @@
     &:hover {
       opacity: 1;
     }
+    @media (max-width: 670px) {
+      margin-left: 20px;
+    }
+    @media (max-width: 553px) {
+      margin-left: 0;
+      left: auto;
+      right: 0;
+      width: 50px;
+      height: 50px;
+    }
   }
 }
 .slider-arr {
@@ -1399,6 +1419,12 @@
   padding: 170px 0 10px 0;
   h3 {
     color: #b5b5b5;
+  }
+  @media ($bplg) {
+    padding-top: 300px;
+  }
+  @media ($bpmd) {
+    padding-top: 400px;
   }
 }
 .logos {
@@ -1414,6 +1440,7 @@
   vertical-align: middle;
   img {
     height: 100%;
+    max-width: 100%;
   }
 }
 // ======= STEPS =======
@@ -1432,8 +1459,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  @media ($bpmd) {
+    display: block;
+    text-align: center;
+  }
 }
 .step-item {
+  vertical-align: middle;
   margin: 10px;
   display: inline-block;
   overflow: hidden;
@@ -1455,6 +1487,9 @@
     margin-top: 20px;
     margin-bottom: 4px;
     font-weight: 500;
+    @media ($bplg) {
+      font-size: 32px;
+    }
   }
   &__desc {
     font-size: 14px;
@@ -1485,6 +1520,9 @@
     width: 80%;
     margin: 0 auto;
     display: block;
+  }
+  @media ($bplg) {
+    margin-bottom: 40px;
   }
 }
 .program-icon {
@@ -1551,6 +1589,9 @@
   .button {
     padding-left: 50px;
     padding-right: 50px;
+  }
+  @media ($bpmd) {
+    flex-direction: column;
   }
 }
 .fame-card {
