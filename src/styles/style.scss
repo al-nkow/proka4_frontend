@@ -1,5 +1,6 @@
 @import 'colors';
 @import 'main';
+@import 'breakpoints';
 
 @mixin gradient {
   background-image: -moz-linear-gradient( 22deg, rgb(250,127,76) 0%, rgb(251,51,96) 100%);
@@ -26,7 +27,60 @@
   transform: translate(-50%, -50%);
 }
 
+.main-mobile {
+  text-align: center;
+  padding: 70px 0;
+  position: relative;
+  overflow: visible!important;
+  color: #ffffff;
+  .wave-top {
+    z-index: 1;
+  }
+  svg {
+    fill: #222222;
+  }
+  .company-name {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  display: none;
+  @media ($bpsm) {
+    display: block;
+  }
+}
+.main-mobile-title {
+  max-width: 300px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
 // ======= NAVIGATION =======
+.mob-logo-img {
+  display: none;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  @media ($bpxs) {
+    display: block;
+  }
+}
+.navigation-mob {
+  display: none;
+  height: 30px;
+  border: 1px solid red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  @media ($bpxs) {
+    display: block;
+  }
+}
 .navigation {
   z-index: 10;
   background: #ffffff;
@@ -39,6 +93,9 @@
   left: 0;
   right: 0;
   height: 77px;
+  @media ($bpxs) {
+    display: none;
+  }
 }
 .logo {
   cursor: pointer;
@@ -54,6 +111,9 @@
   margin-right: 20px;
   border: 3px solid #ffffff;
   border-radius: 50%;
+  @media ($bpmd) {
+    margin-right: 0;
+  }
 }
 .slogan {
   font-size: 14px;
@@ -61,6 +121,9 @@
   font-weight: 500;
   padding-bottom: 16px;
   width: 160px;
+  @media ($bpmd) {
+    display: none;
+  }
 }
 .menu {
   width: 100%;
@@ -68,6 +131,9 @@
   justify-content: flex-end;
   align-items: center;
   display: flex;
+  @media ($bpxs) {
+    display: none;
+  }
 }
 .menu-item {
   cursor: pointer;
@@ -96,6 +162,9 @@
   }
   &.last {
     margin-right: 20px;
+    @media ($bpmd) {
+      margin-right: 5px;
+    }
   }
 }
 .pk-button {
@@ -115,10 +184,13 @@
     margin-top: -2px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   }
+  // @media (max-width: 1024px)
+  @media($bplg) {
+    display: none;
+  }
 }
 // ======= MAIN =======
 .main {
-  min-height: 500px;
   background: url('../img/back.jpg') top center;
   background-size: cover;
   overflow: hidden;
@@ -126,6 +198,18 @@
 .main-wrapper {
   height: 780px;
   position: relative;
+  @media ($bplg) {
+    height: 668px;
+  }
+  @media ($bpmd) {
+    height: 590px;
+  }
+  @media ($bpsm) {
+    height: 500px;
+  }
+  @media (max-width: 400px) {
+    height: 400px;
+  }
 }
 .main-girls {
   position: absolute;
@@ -133,13 +217,33 @@
   right: 0;
   bottom: 0;
   overflow: hidden;
+  @media ($bplg) {
+    top: 50px;
+    width: 575px;
+    img {
+      width: 100%;
+    }
+  }
+  @media ($bpmd) {
+    width: 470px;
+  }
+  @media ($bpsm) {
+    width: 100%;
+  }
 }
 .main-info {
   position: absolute;
   top: 135px;
   left: 0;
+  @media ($bpmd) {
+    top: 87px;
+  }
+  @media ($bpsm) {
+    display: none;
+  }
 }
 .company-name {
+  display: inline-block;
   margin-bottom: 26px;
   position: relative;
   background: #ffffff;
@@ -170,6 +274,40 @@
     left: 100%;
     top: 0;
   }
+  @media ($bplg) {
+    font-size: 99px;
+    line-height: 104px;
+    height: 126px;
+    padding-top: 17px;
+    &:before {
+      border-bottom: 120px solid #ffffff;
+    }
+    &:after {
+      border-top: 120px solid #ffffff;
+    }
+  }
+  @media ($bpmd) {
+    font-size: 76px;
+    line-height: 84px;
+    height: 106px;
+    &:before {
+      border-bottom: 106px solid #ffffff;
+    }
+    &:after {
+      border-top: 106px solid #ffffff;
+    }
+  }
+  @media ($bpxs) {
+    font-size: 60px;
+    line-height: 65px;
+    height: 88px;
+    &:before {
+      border-bottom: 88px solid #ffffff;
+    }
+    &:after {
+      border-top: 88px solid #ffffff;
+    }
+  }
 }
 .main-school {
   font-size: 24px;
@@ -178,6 +316,14 @@
   max-width: 380px;
   font-weight: 300;
   margin-bottom: 30px;
+  @media ($bplg) {
+    font-size: 20px;
+  }
+  @media ($bpmd) {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 320px;
+  }
 }
 .main-but-wrap {
   background: #ffffff;
@@ -187,6 +333,14 @@
   align-items: center;
   padding-right: 20px;
   margin-bottom: 40px;
+  @media($bplg) {
+    .mbw-text {
+      font-size: 14px;
+    }
+    .s-but_main {
+      font-size: 14px;
+    }
+  }
 }
 .mbw-text {
   font-size: 16px;
@@ -226,6 +380,15 @@
     height: 36px;
     vertical-align: middle;
     margin-right: 15px;
+  }
+  @media($bplg) {
+    font-size: 16px;
+  }
+  @media($bpmd) {
+    width: 250px;
+    svg {
+      float: left;
+    }
   }
 }
 // ======= ABOUT =======
@@ -277,6 +440,14 @@
       background: rgba(255,255,255,0.7);
     }
   }
+  img {
+    @media ($bpmd) {
+      width: 300px;
+    }
+    @media (max-width: 400px) {
+      width: 250px;
+    }
+  }
 }
 .about-img-ovl {
   transition: all 0.2s linear;
@@ -312,11 +483,18 @@
 .about-left {
   position: relative;
   display: inline-block;
+  @media ($bpsm) {
+    margin-bottom: 83px;
+  }
 }
 .arr-desc {
   position: absolute;
   top: 0;
   left: 0;
+  @media (max-width: 400px) {
+    top: -30px;
+    left: -6px;
+  }
 }
 .desc {
   position: absolute;
@@ -329,6 +507,9 @@
   transform: rotate(-6deg);
   font-style: italic;
   line-height: 22px;
+  @media (max-width: 400px) {
+    top: -53px;
+  }
 }
 .about-prize {
   @include rotate;
@@ -339,6 +520,9 @@
   bottom: -37px;
   right: 0;
   box-shadow: 0 0 59px 8px rgba( 255, 121, 87, 0.2 );
+  @media (max-width: 400px) {
+    padding: 12px 30px;
+  }
   &__title {
     font-size: 24px;
     line-height: 26px;
@@ -356,14 +540,36 @@
       font-size: 69px;
       font-family: 'Ubuntu', 'Helvetica', sans-serif;
     }
+    @media ($bpmd) {
+      font-size: 67px;
+      line-height: 68px;
+      .rub {
+        font-size: 65px;
+      }
+    }
+    @media (max-width: 400px) {
+      font-size: 52px;
+      line-height: 52px;
+      height: 52px;
+      .rub {
+        font-size: 50px;
+      }
+    }
   }
   &__notice {
     font-size: 22px;
     line-height: 22px;
+    @media (max-width: 400px) {
+      font-size: 16px;
+      line-height: 18px;
+    }
   }
 }
 .about-right {
   padding: 20px 40px;
+  @media ($bpmd) {
+    padding: 0;
+  }
 }
 .awards {
   margin: 25px 0 55px 0;
@@ -620,6 +826,70 @@
     border: 2px solid $roundsPlaceInner;
     border-radius: 50%;
   }
+  @media ($bplg) {
+    width: 700px;
+    height: 700px;
+  }
+  @media (max-width: 1038px) {
+    width: 620px;
+    height: 620px;
+    .main-prize {
+      width: 320px;
+      height: 320px;
+      padding-top: 60px;
+    }
+    .main-prize-sum {
+      font-size: 70px;
+      span {
+        font-size: 67px;
+      }
+    }
+    .prize1 {
+      top: 18%;
+    }
+    .prize2 {
+      top: 18%;
+    }
+  }
+  @media ($bpmd) {
+    border: none;
+    margin: 35px 0 0 0;
+    width: auto;
+    height: auto;
+    text-align: center;
+    &:after {
+      display: none;
+    }
+    .main-prize {
+      width: 290px;
+      height: 290px;
+      position: relative;
+      top: inherit;
+      left: inherit;
+      bottom: inherit;
+      right: inherit;
+      transform: none;
+      margin: 0 auto;
+    }
+    .main-prize-sum {
+      margin: 0;
+    }
+    .prize-item {
+      display: inline-block;
+      position: relative;
+      top: inherit;
+      left: inherit;
+      bottom: inherit;
+      right: inherit;
+      transform: none;
+      margin: 110px 35px;
+    }
+  }
+  @media (max-width: 400px) {
+    .prize-item {
+      margin: 110px 0;
+    }
+  }
 }
 .main-prize {
   position: absolute;
@@ -747,6 +1017,13 @@
   flex-direction: row;
   max-width: 876px;
   margin-bottom: 100px;
+  @media ($bpsm) {
+    flex-direction: column;
+    width: 100%;
+  }
+  @media (max-width: 400px) {
+    padding: 20px;
+  }
 }
 .teacher-img-wrap {
   position: relative;
@@ -758,6 +1035,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @media ($bpsm) {
+    width: 252px;
+    height: 252px;
+  }
 }
 .teacher-img {
   width: 92%;
@@ -768,6 +1049,10 @@
 }
 .teacher-contacts {
   margin-top: -95px;
+  @media ($bpsm) {
+    margin: -95px 0 20px 0;
+    padding: 0!important;
+  }
 }
 .teacher-icons-wrap {
   text-align: center;
@@ -820,17 +1105,28 @@
       right: 0;
     }
   }
+  @media ($bpsm) {
+    order: 2;
+  }
 }
 .sasha-right {
   flex: none;
   .teacher-contacts {
     padding-left: 20px;
   }
+  @media ($bpsm) {
+    order: 1;
+  }
 }
 .teacher-row {
   display: flex;
   &.left {
     justify-content: flex-start;
+    @media ($bpsm) {
+      .teacher-block {
+        margin-bottom: 150px;
+      }
+    }
   }
   &.right {
     justify-content: flex-end;
@@ -896,6 +1192,9 @@
   padding: 0 20px;
   position: relative;
   z-index: 1;
+  @media ($bpmd) {
+    margin-bottom: 20px;
+  }
 }
 .map-rounds {
   z-index: -1;

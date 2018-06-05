@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'breakpoints';
 
 @font-face {
   font-family:'Bebas_Neue_Bold';
@@ -16,12 +17,19 @@ body {
   font-family: 'Ubuntu', 'Helvetica', sans-serif;
   color: $grey;
   padding-top: 77px;
+  @media ($bpxs) {
+    padding-top: 0;
+  }
 }
 h2 {
   font-size: 42px;
   line-height: 46px;
   font-weight: bold;
   margin-bottom: 30px;
+  @media ($bpmd) {
+    font-size: 36px;
+    line-height: 40px;
+  }
 }
 h3 {
   font-size: 30px;

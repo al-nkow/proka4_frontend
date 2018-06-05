@@ -32,6 +32,7 @@ function ready() {
     });
   }
 
+
 }
 
 
@@ -40,7 +41,12 @@ function ready() {
 
 
 
-// import $ from 'jquery';
+
+
+
+
+
+
 // const testFunc = (a, b) => {
 //   console.log('>>>>>', a, b);
 // };
