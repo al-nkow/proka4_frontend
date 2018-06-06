@@ -1022,10 +1022,13 @@
 }
 // ======= PRIZES =======
 .teachers {
-  padding: 100px 0;
+  padding: 140px 0 80px 0;
   background: url('../img/teachersbg.jpg') top center;
   background-size: cover;
   overflow: hidden;
+  @media ($bpmd) {
+    padding: 100px 0 40px 0;
+  }
 }
 .teachers-head {
   color: #ffffff;
@@ -1591,6 +1594,11 @@
   margin-bottom: 15px;
   line-height: 18px;
 }
+.program-price {
+  text-align: center;
+  font-size: 46px;
+  color: #d05242;
+}
 .program-body {
   margin-bottom: 40px;
 }
@@ -2051,6 +2059,7 @@ iframe.presentation {
 }
 .popupdesc {
   font-size: 14px;
+  line-height: 20px;
   font-weight: 300;
   color: #d24f4c;
 }

@@ -1,5 +1,5 @@
 {
-  "name": "landing",
+  "name": "proka4show",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "dev": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
-  "author": "",
+  "author": "Aleksey Kovalchuk",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^8.5.0",

@@ -92,6 +92,18 @@ const conf = {
           }
         }]
       },
+      // ===== FAVICON =====
+      {
+        test: /\.ico$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: '/',
+            publicPath: '/'
+          }
+        }]
+      },
     ]
   },
   plugins: [
