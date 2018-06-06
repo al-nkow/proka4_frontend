@@ -264,6 +264,8 @@
     position: absolute;
     right: 100%;
     bottom: 0;
+    border-right: 1px solid #ffffff;
+    margin-right: -1px;
   }
   &:after {
     content: '';
@@ -273,6 +275,8 @@
     position: absolute;
     left: 100%;
     top: 0;
+    border-left: 1px solid #ffffff;
+    margin-left: -1px;
   }
   @media ($bplg) {
     font-size: 99px;
@@ -306,6 +310,14 @@
     }
     &:after {
       border-top: 88px solid #ffffff;
+    }
+  }
+  @media (max-width: 400px) {
+    &:before {
+      border-left: 23px solid transparent;
+    }
+    &:after {
+      border-right: 23px solid transparent;
     }
   }
 }
@@ -602,12 +614,21 @@
     height: 54px;
     top: -41px;
     right: -10px;
+    @media ($bpmd) {
+      right: 10px;
+    }
   }
   &.bottom {
     width: 154px;
     height: 154px;
     bottom: -205px;
     right: -80px;
+    @media ($bpmd) {
+      bottom: -178px;
+      width: 100px;
+      height: 100px;
+      right: 20px;
+    }
   }
 }
 // ======= BENEFITS =======
@@ -1255,6 +1276,9 @@
     transform: translate(-50%, 0);
     background: #ffffff;
   }
+  @media ($bpxs) {
+    display: none;
+  }
 }
 .russia {
   top: 27%;
@@ -1490,6 +1514,9 @@
     @media ($bplg) {
       font-size: 32px;
     }
+    @media (max-width: 400px) {
+      word-break: break-all;
+    }
   }
   &__desc {
     font-size: 14px;
@@ -1520,6 +1547,9 @@
     width: 80%;
     margin: 0 auto;
     display: block;
+    @media (max-width: 400px) {
+      width: 100%;
+    }
   }
   @media ($bplg) {
     margin-bottom: 40px;
@@ -1592,10 +1622,14 @@
   }
   @media ($bpmd) {
     flex-direction: column;
+    padding: 37px 0 20px 0;
   }
 }
 .fame-card {
   flex: none;
+  @media ($bpmd) {
+    text-align: center;
+  }
 }
 .fame-photo-wrap {
   display: inline-block;
@@ -1681,14 +1715,23 @@
   position: absolute;
   color: #919191;
   font-weight: 300;
+  @media (max-width: 335px) {
+    display: none;
+  }
 }
 .fame-arr {
   position: absolute;
   top: 9px;
   left: -70px;
+  @media (max-width: 335px) {
+    display: none;
+  }
 }
 .fame-info {
   padding: 20px 0 20px 40px;
+  @media ($bpmd) {
+    padding: 20px 0;
+  }
 }
 .fame-info-title {
   font-size: 30px;
@@ -1800,12 +1843,20 @@
   &:hover {
     opacity: 0.9;
   }
+  @media ($bpxs) {
+    opacity: 0.5;
+    width: 60px;
+    height: 60px;
+  }
   &.news-prev {
     top: 130px;
     left: 0;
     margin-left: -25px;
     .slider-arr {
       margin-left: -4px;
+    }
+    @media ($bpxs) {
+      margin-left: -5px;
     }
   }
   &.news-next {
@@ -1814,6 +1865,9 @@
     margin-right: -25px;
     .slider-arr {
       margin-right: -4px;
+    }
+    @media ($bpxs) {
+      margin-right: -5px;
     }
   }
 }
@@ -1911,6 +1965,9 @@
 .footer {
   padding: 150px 0 50px 0;
   background: #222222;
+  @media ($bpxs) {
+    padding-top: 50px;
+  }
 }
 .foot-logo {
   margin-bottom: 15px;
@@ -1923,6 +1980,11 @@
   font-weight: 300;
   a {
     color: #a9a9a9;
+  }
+}
+.foot-col {
+  @media ($bpxs) {
+    margin-bottom: 40px;
   }
 }
 .foot-col-title {
@@ -1944,6 +2006,7 @@
 .underFooter {
   background: #1d1d1d;
   height: 76px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1966,6 +2029,11 @@
     }
   }
 }
+.instafooter {
+  max-width: 218px;
+  display: block;
+  margin: 20px;
+}
 iframe.presentation {
   position: absolute;
   width: 100%;
@@ -1987,6 +2055,10 @@ iframe.presentation {
     font-size: 14px;
     margin-bottom: 5px;
     font-weight: 500;
+    &.grey {
+      color: #777777;
+      font-weight: 400;
+    }
   }
 }
 .form-control {

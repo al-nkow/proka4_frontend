@@ -107,6 +107,12 @@ p {
     margin-top: 12px;
     background: #FF5C58;
   }
+  @media (max-width: 400px) {
+    h3 {
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
 }
 .close-but {
   transition: all 0.2s linear;
@@ -131,6 +137,9 @@ p {
   max-width: 70%;
   margin: 0 auto;
   position: relative;
+  @media (max-width: 400px) {
+    max-width: 100%;
+  }
   .carousel-control-prev {
     top: 210px;
     left: auto;
@@ -150,6 +159,14 @@ p {
     }
     &:hover {
       opacity: 1;
+    }
+    @media (max-width: 400px) {
+      top: 20%;
+      width: 60px;
+      height: 60px;
+      margin-right: 0;
+      right: auto;
+      left: 0;
     }
   }
   .carousel-control-next {
@@ -171,6 +188,14 @@ p {
     }
     &:hover {
       opacity: 1;
+    }
+    @media (max-width: 400px) {
+      top: 20%;
+      width: 60px;
+      height: 60px;
+      margin-left: 0;
+      left: auto;
+      right: 0;
     }
   }
 }
@@ -197,6 +222,9 @@ p {
   transform: translate(-50%, 0);
   color: #ffffff;
   font-size: 22px;
+  @media (max-width: 400px) {
+    font-size: 16px;
+  }
 }
 
 

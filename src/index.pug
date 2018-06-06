@@ -153,7 +153,7 @@ html
       include tmps/wave
       .container
         .prizes
-          h3.text-center Наши партнеры и главные призы
+          h3.text-center Наши партнёры и главные призы
           .sub-title Тебя ждёт много интересного!
           .places
             .main-prize
@@ -324,7 +324,7 @@ html
               img(src=require("./img/partner1.png"))
             a.logo-item(href="https://www.instagram.com/smilestudio_ss/" target="_blank")
               img(src=require("./img/partner2.png"))
-            a.logo-item(href="/" target="_blank")
+            a.logo-item(href="http://mcpo-ostankino.ru/" target="_blank")
               img(src=require("./img/partner3.png"))
     // =============== STEPS ===============
     .black-block
@@ -475,7 +475,7 @@ html
                         a.fame-insta(href="https://www.instagram.com/p/Bh_8_NWDHoM/" target="_blank")
                           include tmps/instagram
                         .fame-photo-back
-                          .fame-img(style="background-image: url(" + require("./img/kupriyanova.jpg") + ")")
+                          .fame-img(style="background-image: url(" + require("./img/kupriyanova_new.jpg") + ")")
                       .fame-name Марианна Куприянова
                       .fame-place <span>1 место</span> / 9 сезон
                     .fame-info
@@ -554,29 +554,34 @@ html
     .footer
       .container
         .row
-          .col-sm-4
-            img.foot-logo(src=require("./img/foot-logo.png"))
-            .foot-block
-              div <b>ИНН</b> 7722416593
-              div <b>ОГРН</b> 5177746148069
-            .foot-block
-              div <b>Адрес:</b>
-              div 111116, г.Москва, ул. Авиамоторная, д.4, корп.2, пом. IV, комната 2
-            .foot-block
-              div <b>Телефон/Факс:</b>
-              div 8 (495) 231-49-09
-            .foot-block
-              div <b>Эл.почта:</b>
-              a(href="mailto:prokachshow@gmail.com") prokachshow@gmail.com
-          .col-sm-4
-            .foot-col-title Полезные ссылки
-            .foot-link Преподаватели
-            .foot-link Советы от школы
-            .foot-link Акции
-            .foot-link Политика защиты и обработки<br/>персональных данных
-            .foot-link Оферта
-          .col-sm-4
-            .foot-col-title Instagram
+          .col-md-4
+            .foot-col
+              img.foot-logo(src=require("./img/foot-logo.png"))
+              .foot-block
+                div <b>ИНН</b> 7722416593
+                div <b>ОГРН</b> 5177746148069
+              .foot-block
+                div <b>Адрес:</b>
+                div 111116, г.Москва, ул. Авиамоторная, д.4, корп.2, пом. IV, комната 2
+              .foot-block
+                div <b>Телефон/Факс:</b>
+                div 8 (495) 231-49-09
+              .foot-block
+                div <b>Эл.почта:</b>
+                a(href="mailto:prokachshow@gmail.com") prokachshow@gmail.com
+          .col-md-4
+            .foot-col
+              .foot-col-title Полезные ссылки
+              .foot-link Преподаватели
+              .foot-link Советы от школы
+              .foot-link Акции
+              .foot-link Политика защиты и обработки<br/>персональных данных
+              .foot-link Оферта
+          .col-md-4
+            .foot-col
+              .foot-col-title Instagram
+                a(href="https://www.instagram.com/ladyworld_nas/" target="_blank")
+                  img.instafooter(src=require("./img/instafooter.png"))
     .underFooter
       span © 2018 Он-лайн школа перемен для женщин PROкачSHOW
 
