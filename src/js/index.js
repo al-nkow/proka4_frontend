@@ -1,16 +1,16 @@
-import {last} from './last';
+import oldLogic from './old';
 import 'bootstrap/dist/js/bootstrap.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/style.scss';
 import 'ubuntu-fontface/_ubuntu.scss'
+import $ from 'jquery';
+// import '../docs/offer.pdf';
+// import '../docs/policy.pdf';
 
 import Siema from 'siema';
 
-
-
 document.addEventListener('DOMContentLoaded', ready);
 function ready() {
-
 
   const newsSiema = new Siema({
     selector: '.newsSiema',
@@ -21,6 +21,7 @@ function ready() {
     },
     loop: true
   });
+
   document.querySelector('.news-prev').addEventListener('click', () => newsSiema.prev());
   document.querySelector('.news-next').addEventListener('click', () => newsSiema.next());
 
@@ -32,29 +33,23 @@ function ready() {
     });
   }
 
+  oldLogic();
+
+  const yearBlock = document.getElementById('currentYear');
+  const date = new Date().getFullYear();
+  yearBlock.innerText = date;
+
+
+  const scrollToElement = (id, duration) => {
+    $('html, body').animate({
+      scrollTop: $(id).offset().top
+    }, duration || 2000);
+  };
+
+  $('.scrollToTeachers').on('click', () => scrollToElement('#teachers', 1000));
+  $('.scrollToFaq').on('click', () => scrollToElement('#faq', 1000));
+  $('.scrollToFooter').on('click', () => scrollToElement('#footer', 1000));
+  $('.scrollToPay').on('click', () => scrollToElement('#pay', 1000));
+  $('.scrollToActions').on('click', () => scrollToElement('#actions', 1000));
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const testFunc = (a, b) => {
-//   console.log('>>>>>', a, b);
-// };
-//
-// let a = 5;
-// let b = 6;
-//
-// testFunc(a, b);
-//
-// console.log('HELLO!!!', last);
-// $('.carousel').carousel();

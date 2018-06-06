@@ -151,7 +151,7 @@
       .mod-head
         .close-but(data-dismiss="modal" aria-label="Close")
           span(aria-hidden="true") &times;
-        h3.text-center Введите личные данные
+        h3.text-center#priceModalLabel Введите личные данные
         .block-head-divider
       .modal-body.pay-modal
         // ++++++++++++++++++++++++++
@@ -188,7 +188,7 @@
               label
                 input#pieOffer.cbinp(type='checkbox')
                 |  Я принимаю условия
-                a.cblabel(href='./docs/offer.pdf', target='_blank') оферты
+                a.cblabel(href=require("../docs/offer.pdf") target="_blank") оферты
                 | .
           .form-group
             label.grey

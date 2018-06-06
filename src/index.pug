@@ -22,11 +22,11 @@ html
           img.logo-img(src=require("./img/logo.png"))
           .slogan Онлайн школа перемен для женщин
         .menu
-          .menu-item Преподаватели проекта
+          .menu-item.scrollToTeachers Преподаватели проекта
           //.menu-item Полезные материалы
-          .menu-item Частые вопросы
-          .menu-item.last Контакты
-          .pk-button Я готова меняться!
+          .menu-item.scrollToFaq Частые вопросы
+          .menu-item.last.scrollToFooter Контакты
+          .pk-button.scrollToPay Я готова меняться!
     // =============== MAIN ===============
     .main
       .container
@@ -39,7 +39,7 @@ html
             .main-school
               | Онлайн-школа перемен для женщин, которые хотят обрести настоящее женское счастье и гармонию
             .main-but-wrap
-              .s-but.s-but_main Я готова меняться!
+              .s-but.s-but_main.scrollToPay Я готова меняться!
               .mbw-text
                 span(style="margin-right: 5px;") Сделай первый шаг
                 svg.mbw-arr(viewBox="0 0 129 129")
@@ -62,7 +62,7 @@ html
       .container
         .company-name Prokaчshow
         .main-mobile-title Онлайн-школа перемен для женщин, которые хотят обрести настоящее женское счастье и гармонию
-        .s-but.s-but_main Я готова меняться!
+        .s-but.s-but_main.scrollToPay Я готова меняться!
     // =============== ABOUT ===============
     .white-block
       include tmps/wave
@@ -94,7 +94,7 @@ html
                   .awards__text
                     .awards__name ProKaчShow
                     | - Победитель Международной премии <br/> «Aurora Diamond Award-2017»
-                .button.drop-shadow Я хочу выиграть миллион!
+                .button.drop-shadow.scrollToPay Я хочу выиграть миллион!
     // =============== BENEFITS ===============
     .black-block
       .black-block__background
@@ -177,7 +177,7 @@ html
               .prize-img(style="background-image: url(" + require("./img/prize4.jpg") + ")")
               .prize-name Обучение на телеведущую в останкино
     // =============== TEACHERS ===============
-    .teachers
+    .teachers#teachers
       .teachers-background
         .teacher-rounds.top
         .teacher-rounds.bottom
@@ -268,7 +268,7 @@ html
                   | Белорусия, Германия, Дания, Израиль, Казахстан, Канада, Киргизия, Китай, Латвия, Литва, Молдавия, Нидерланды,
                   | ОАЭ, Польша, Румыния, Словакия, Словения, США, Тайланд, Узбекистан, Украина, Финляндия, Франция,
                   | Хорватия, Черногория, Чехия, Швеция, Швейцария, Шри-Ланка и Эстония!
-              .button.dark.drop-shadow Я хочу участвовать!
+              .button.dark.drop-shadow.scrollToPay Я хочу участвовать!
             .col-lg-7.order-1.order-lg-2
               .map-wrap
                 .map-rounds
@@ -357,7 +357,7 @@ html
                 .step-item__title Преображайся
                 .step-item__desc и выигрывай призы!
     // =============== PROGRAMS ===============
-    .white-block
+    .white-block#pay
       include tmps/wave
       .container
         .programs-block
@@ -381,7 +381,12 @@ html
                   .program-point Эффективные тренировки и план питания
                   .program-point Обновление меню каждую неделю
                   .program-point Общение в общем чате с мотиваторами и участниками проекта
-                .button.point(data-toggle="modal" data-target="#priceModal") Подать заявку
+                //.button.point(data-toggle="modal" data-target="#priceModal") Подать заявку
+                .button.point.priceBtn(
+                  id="program1"
+                  data-option="Программа похудения Лайт"
+                  data-price="3000"
+                  ) Подать заявку
             .col-lg-4
               .program-item
                 .program-head
@@ -397,7 +402,11 @@ html
                   .program-point Спортивный соревновательный этап
                   .program-point Расширенный курс лекций
                   .program-point + Ценные призы за лучшие результаты (миллион, пластическая операция, виниры и спец. обучение)
-                .button.point Подать заявку
+                .button.point.priceBtn(
+                  id="program3"
+                  data-option="Малышка на миллион"
+                  data-price="7000"
+                  ) Подать заявку
                 .program-ribbon Супер!
             .col-lg-4
               .program-item
@@ -415,7 +424,11 @@ html
                   .program-point Еженедельные спортивные задания и марафоны
                   .program-point Обсуждение актуальных вопросов с психологами
                   .program-point Базовый курс лекций от специалистов
-                .button.point Подать заявку
+                .button.point.priceBtn(
+                  id="program2"
+                  data-option="Леди - Классик"
+                  data-price="5000"
+                  ) Подать заявку
     // =============== FAME ===============
     .black-block
       .fame-block
@@ -499,7 +512,7 @@ html
     // =============== PROGRAMS ===============
     .white-block.light
       include tmps/wave
-      .container
+      .container#actions
         .news-block
           h3.text-center Акции и главные новости
           .block-head-divider
@@ -539,7 +552,7 @@ html
     .white-block
       svg.wave-bottom(x="0px" y="0px" viewBox="0 1557.3 2834.6 120.5")
         path(d="M2350.2,1639.4c-360.6-49.3-516.3-7.4-654.7,4.2s-327.8,6-522.5-34.6c-194.8-40.6-428.4-61.6-657,26.5c-228.6,88.1-363.4,17.8-516-22.4c0-36.5,0.7-12,0.7-57c785.5,3.2,2481.1,0.2,2833.3-0.9c0,30.9,0.7,29.8,0.7,43.6C2747.7,1636.6,2588.9,1671.9,2350.2,1639.4z")
-      .container
+      .container#faq
         .faq-block
           h3.text-center Часто задаваемые вопросы
           .block-head-divider
@@ -551,7 +564,7 @@ html
             a.button.point(href="mailto:prokachshow@gmail.com") Задать свой вопрос
             .show-more Показать еще вопросы
     // =============== FOOTER ===============
-    .footer
+    .footer#footer
       .container
         .row
           .col-md-4
@@ -572,20 +585,20 @@ html
           .col-md-4
             .foot-col
               .foot-col-title Полезные ссылки
-              .foot-link Преподаватели
-              .foot-link Советы от школы
-              .foot-link Акции
-              .foot-link Политика защиты и обработки<br/>персональных данных
-              .foot-link Оферта
+              .foot-link.scrollToTeachers Преподаватели
+              //.foot-link Советы от школы
+              .foot-link.scrollToActions Акции
+              a.foot-link(href=require("./docs/policy.pdf") target="_blank") Политика защиты и обработки<br/>персональных данных
+              a.foot-link(href=require("./docs/offer.pdf") target="_blank") Оферта
           .col-md-4
             .foot-col
               .foot-col-title Instagram
                 a(href="https://www.instagram.com/ladyworld_nas/" target="_blank")
                   img.instafooter(src=require("./img/instafooter.png"))
     .underFooter
-      span © 2018 Он-лайн школа перемен для женщин PROкачSHOW
-
-
+      span © <span id="currentYear">2018</span> Он-лайн школа перемен для женщин PROкачSHOW
 
     // ============ MODALS ======================
     include tmps/modals
+
+  script(src="https://3dsec.sberbank.ru/demopayment/docsite/_prod/assets/js/ipay.js")
