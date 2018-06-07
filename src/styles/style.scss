@@ -798,6 +798,29 @@
   background-size: cover;
   background-position: center;
 }
+@keyframes benbackground {
+  0% {
+    background-image: url('../img/ben-a2.jpg');
+  }
+  45% {
+    background-image: url('../img/ben-a2.jpg');
+  }
+  50% {
+    background-image: url('../img/ben-a1.jpg');
+  }
+  95% {
+    background-image: url('../img/ben-a1.jpg');
+  }
+  100% {
+    background-image: url('../img/ben-a2.jpg');
+  }
+}
+.ben-animate {
+  animation-name: benbackground;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 .ben-notice {
   position: relative;
   z-index: 1;
