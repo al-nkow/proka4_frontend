@@ -7,7 +7,8 @@ const conf = {
   entry: './src/js/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'main.js'
+    // filename: 'main.js'
+    filename: '[name].[chunkhash].js'
   },
   devServer: {
     overlay: true
@@ -111,7 +112,7 @@ const conf = {
       filename: 'index.html',
       template: './src/index.pug'
     }),
-    new ExtractTextPlugin('styles.css')
+    new ExtractTextPlugin('styles-[hash:6].css')
   ]
 };
 
