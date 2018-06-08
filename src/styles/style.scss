@@ -424,6 +424,7 @@
   width: 100%;
   left: 0;
   fill: $bgLight;
+  margin-bottom: -1px;
 }
 .wave-bottom {
   z-index: 2;
@@ -432,6 +433,7 @@
   width: 100%;
   left: 0;
   fill: $bgLight;
+  margin-top: -1px;
 }
 .about-wrap {
   padding: 100px 0;
@@ -582,6 +584,12 @@
   @media ($bpmd) {
     padding: 0;
   }
+  @media ($bpxs) {
+    text-align: center;
+    .awards {
+      text-align: left;
+    }
+  }
 }
 .awards {
   margin: 25px 0 55px 0;
@@ -681,10 +689,14 @@
 
 .benefits {
   padding: 120px 0;
+  @media ($bpxs) {
+    padding: 76px 0 60px 0;
+  }
 }
 .benefit {
   z-index: 2;
   margin: 35px 10px;
+  display: inline-block;
 }
 .benefits-block {
   margin-bottom: 20px;
@@ -831,6 +843,9 @@
   font-size: 16px;
   font-weight: 300;
   line-height: 20px;
+  @media ($bpxs) {
+    padding-left: 76px;
+  }
 }
 .ben-title {
   display: inline-block;
@@ -849,10 +864,16 @@
 }
 .ben-head {
   margin-bottom: 40px;
+  @media ($bpxs) {
+    margin-bottom: 20px;
+  }
 }
 // ======= PRIZES =======
 .prizes {
   padding: 60px 0 90px 0;
+  @media ($bpxs) {
+    padding-bottom: 40px;
+  }
 }
 .places {
   position: relative;
@@ -1053,6 +1074,9 @@
   @media ($bpmd) {
     padding: 100px 0 40px 0;
   }
+  @media ($bpxs) {
+    padding: 60px 0 0 0;
+  }
 }
 .teachers-head {
   color: #ffffff;
@@ -1069,6 +1093,9 @@
   @media ($bpsm) {
     flex-direction: column;
     width: 100%;
+  }
+  @media ($bpxs) {
+    text-align: center;
   }
   @media (max-width: 400px) {
     padding: 20px;
@@ -1087,6 +1114,7 @@
   @media ($bpsm) {
     width: 252px;
     height: 252px;
+    margin: 0 auto;
   }
 }
 .teacher-img {
@@ -1101,6 +1129,9 @@
   @media ($bpsm) {
     margin: -95px 0 20px 0;
     padding: 0!important;
+  }
+  @media ($bpxs) {
+    margin-bottom: 10px;
   }
 }
 .teacher-icons-wrap {
@@ -1143,6 +1174,9 @@
     position: absolute;
     top: 100%;
     left: 0;
+    @media ($bpxs) {
+      position: static;
+    }
   }
 }
 .sasha-left {
@@ -1156,6 +1190,9 @@
   }
   @media ($bpsm) {
     order: 2;
+  }
+  @media ($bpxs) {
+    text-align: center;
   }
 }
 .sasha-right {
@@ -1223,6 +1260,10 @@
 // ======= MAP =======
 .map-block-wrap {
   padding: 100px 0;
+  @media ($bpxs) {
+    text-align: center;
+    padding: 50px 0;
+  }
 }
 .head-divider {
   background: $divider;
@@ -1337,6 +1378,9 @@
   color: #ffffff;
   margin-bottom: -175px;
   position: relative;
+  @media ($bpxs) {
+    padding-top: 60px;
+  }
 }
 .block-head-divider {
   height: 4px;
@@ -1514,6 +1558,9 @@
   .sub-title {
     font-weight: 300;
   }
+  @media ($bpxs) {
+    padding: 60px 0 0 0;
+  }
 }
 .steps {
   margin: 60px 0;
@@ -1652,6 +1699,9 @@
   .block-head-divider {
     background: #fe5d4b;
   }
+  @media ($bpxs) {
+    padding: 194px 0 30px 0;
+  }
 }
 .fame-slide {
   min-height: 440px;
@@ -1665,6 +1715,10 @@
   @media ($bpmd) {
     flex-direction: column;
     padding: 37px 0 20px 0;
+  }
+  @media ($bpxs) {
+    text-align: center;
+    overflow: hidden;
   }
 }
 .fame-card {
@@ -1833,6 +1887,9 @@
   .block-head-divider {
     background: #fe5d4b;
   }
+  @media ($bpxs) {
+    padding-bottom: 10px;
+  }
 }
 .news-date {
   font-size: 12px;
@@ -1931,6 +1988,9 @@
       }
     }
   }
+  @media ($bpxs) {
+    padding: 50px 0;
+  }
 }
 .questions-wrap {
   margin: 40px 0;
@@ -2022,6 +2082,9 @@
   font-weight: 300;
   a {
     color: #a9a9a9;
+  }
+  @media ($bpxs) {
+    font-size: 14px;
   }
 }
 .foot-col {

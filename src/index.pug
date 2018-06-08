@@ -335,9 +335,6 @@ html
               .instaSlide
                 a(href="https://www.instagram.com/p/BUKhuSjFYjM/?r=wa1" target="_blank")
                   img.d-block.w-100(src=require("./img/instaReview2.jpg"))
-
-
-
             a.carousel-control-prev.reviewSiema-prev(href="#carouselReviews" role="button" data-slide="prev")
               svg.slider-arr(viewBox="0 0 129 129")
                 g
@@ -348,26 +345,6 @@ html
                 g
                   path(d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z")
               span.sr-only Next
-          //.reviews-slider
-          //  div(id="carouselReviews" class="carousel slide" data-ride="carousel" data-interval="false")
-          //    .carousel-inner
-          //      .instaSlide.carousel-item.active
-          //        a(href="https://www.instagram.com/p/BTMlJsPgP9r/?r=wa1" target="_blank")
-          //          img.d-block.w-100(src=require("./img/instaReview1.jpg"))
-          //      .instaSlide.carousel-item
-          //        a(href="https://www.instagram.com/p/BUKhuSjFYjM/?r=wa1" target="_blank")
-          //          img.d-block.w-100(src=require("./img/instaReview2.jpg"))
-          //  a.carousel-control-prev(href="#carouselReviews" role="button" data-slide="prev")
-          //    svg.slider-arr(viewBox="0 0 129 129")
-          //      g
-          //        path(d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z")
-          //    span.sr-only Previous
-          //  a.carousel-control-next(href="#carouselReviews" role="button" data-slide="next")
-          //    svg.slider-arr(viewBox="0 0 129 129")
-          //      g
-          //        path(d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z")
-          //    span.sr-only Next
-
     // =============== PARTNERS ===============
     .white-block
       include tmps/wave
@@ -496,75 +473,71 @@ html
           h3.text-center Доска почёта
           .block-head-divider
           .fame-slider-wrap
-            div(id="carouselFame" class="carousel slide" data-ride="carousel" data-interval="false")
-              .carousel-inner
+            .fameSiema
                 // ================= SLIDE 1 =================
-                .carousel-item.active
-                  .fame-slide
-                    .fame-card
-                      .fame-photo-wrap
-                        img.fame-arr(src=require("./img/fame-arr.png"))
-                        .fame-desc Отзыв взят из инстаграма!
-                        a.fame-insta(href="https://www.instagram.com/p/Bh_8_NWDHoM/" target="_blank")
-                          include tmps/instagram
-                        .fame-photo-back
-                          .fame-img(style="background-image: url(" + require("./img/fame1.jpg") + ")")
-                      .fame-name Ксения Великая
-                      .fame-place <span>1 место</span> / 2 сезон
-                    .fame-info
-                      .fame-info-title "Я безумно благодарна судьбе,<br/>что в моей жизни появился проект!
-                      .fame-info-notice Он изменил мою жизнь, мое тело, мое мышление, мое мировоззрение! Я попала в семью,
-                        | где очень теплая атмосфера и Мощная мотивация. @dasha-pirozhkova и @sashakabaeva_official , спасибо,
-                        | что Вы есть, создатели единственной в своём роде Школы перемен для женщин"
-                      .button.point(data-toggle="modal" data-target="#velikayaResults") Смотреть до/после
+                .fame-slide
+                  .fame-card
+                    .fame-photo-wrap
+                      img.fame-arr(src=require("./img/fame-arr.png"))
+                      .fame-desc Отзыв взят из инстаграма!
+                      a.fame-insta(href="https://www.instagram.com/p/Bh_8_NWDHoM/" target="_blank")
+                        include tmps/instagram
+                      .fame-photo-back
+                        .fame-img(style="background-image: url(" + require("./img/fame1.jpg") + ")")
+                    .fame-name Ксения Великая
+                    .fame-place <span>1 место</span> / 2 сезон
+                  .fame-info
+                    .fame-info-title "Я безумно благодарна судьбе,<br/>что в моей жизни появился проект!
+                    .fame-info-notice Он изменил мою жизнь, мое тело, мое мышление, мое мировоззрение! Я попала в семью,
+                      | где очень теплая атмосфера и Мощная мотивация. @dasha-pirozhkova и @sashakabaeva_official , спасибо,
+                      | что Вы есть, создатели единственной в своём роде Школы перемен для женщин"
+                    .button.point(data-toggle="modal" data-target="#velikayaResults") Смотреть до/после
                 // ===========================================
                 // ================= SLIDE 2 =================
-                .carousel-item
-                  .fame-slide
-                    .fame-card
-                      .fame-photo-wrap
-                        img.fame-arr(src=require("./img/fame-arr.png"))
-                        .fame-desc Отзыв взят из инстаграма!
-                        a.fame-insta(href="https://www.instagram.com/p/Bh_8_NWDHoM/" target="_blank")
-                          include tmps/instagram
-                        .fame-photo-back
-                          .fame-img(style="background-image: url(" + require("./img/belozertceva.jpg") + ")")
-                      .fame-name Мария Белозерцева
-                      .fame-place <span>4 место</span> / 9 сезон
-                    .fame-info
-                      .fame-info-title "Я самая счастливая - 33кг!
-                      .fame-info-notice Как же я счастлива что попала в проект, ведь это благодаря ему&#8194;
-                        | со мной произошли такие изменения! Я изменилась и моя жизнь стала ярче!&#8194;
-                        | Девочки спасибо Вам за вашу поддержку, за ваше внимание и спасибо вам за PROkaчSHOW!&#8194;
-                      .button.point(data-toggle="modal" data-target="#belozertcevaResults") Смотреть до/после
+                .fame-slide
+                  .fame-card
+                    .fame-photo-wrap
+                      img.fame-arr(src=require("./img/fame-arr.png"))
+                      .fame-desc Отзыв взят из инстаграма!
+                      a.fame-insta(href="https://www.instagram.com/p/Bh_8_NWDHoM/" target="_blank")
+                        include tmps/instagram
+                      .fame-photo-back
+                        .fame-img(style="background-image: url(" + require("./img/belozertceva.jpg") + ")")
+                    .fame-name Мария Белозерцева
+                    .fame-place <span>4 место</span> / 9 сезон
+                  .fame-info
+                    .fame-info-title "Я самая счастливая - 33кг!
+                    .fame-info-notice Как же я счастлива что попала в проект, ведь это благодаря ему&#8194;
+                      | со мной произошли такие изменения! Я изменилась и моя жизнь стала ярче!&#8194;
+                      | Девочки спасибо Вам за вашу поддержку, за ваше внимание и спасибо вам за PROkaчSHOW!&#8194;
+                    .button.point(data-toggle="modal" data-target="#belozertcevaResults") Смотреть до/после
                 // ===========================================
                 // ================= SLIDE 3 =================
-                .carousel-item
-                  .fame-slide
-                    .fame-card
-                      .fame-photo-wrap
-                        img.fame-arr(src=require("./img/fame-arr.png"))
-                        .fame-desc Отзыв взят из инстаграма!
-                        a.fame-insta(href="https://www.instagram.com/p/Bh_8_NWDHoM/" target="_blank")
-                          include tmps/instagram
-                        .fame-photo-back
-                          .fame-img(style="background-image: url(" + require("./img/kupriyanova_new.jpg") + ")")
-                      .fame-name Марианна Куприянова
-                      .fame-place <span>1 место</span> / 9 сезон
-                    .fame-info
-                      .fame-info-title "Раньше считала, что правильное питание это очень тяжело,
-                      .fame-info-notice на тренировки нет времени, вообщем сплошные отговорки! С проектом поняла,
-                        | что можно с ребёнком, работой все совмещать! Стоит только захотеть и приложить усилия конечно
-                        | к этому. Я изменилась как внутри так и снаружи! Спасибо вам, девочки, за мотивацию,
-                        | познавательные лекции, эффективные тренировки, за поддержку во всём!"
-                      .button.point(data-toggle="modal" data-target="#kupriyanovaResults") Смотреть до/после
+                .fame-slide
+                  .fame-card
+                    .fame-photo-wrap
+                      img.fame-arr(src=require("./img/fame-arr.png"))
+                      .fame-desc Отзыв взят из инстаграма!
+                      a.fame-insta(href="https://www.instagram.com/p/Bh_8_NWDHoM/" target="_blank")
+                        include tmps/instagram
+                      .fame-photo-back
+                        .fame-img(style="background-image: url(" + require("./img/kupriyanova_new.jpg") + ")")
+                    .fame-name Марианна Куприянова
+                    .fame-place <span>1 место</span> / 9 сезон
+                  .fame-info
+                    .fame-info-title "Раньше считала, что правильное питание это очень тяжело,
+                    .fame-info-notice на тренировки нет времени, вообщем сплошные отговорки! С проектом поняла,
+                      | что можно с ребёнком, работой все совмещать! Стоит только захотеть и приложить усилия конечно
+                      | к этому. Я изменилась как внутри так и снаружи! Спасибо вам, девочки, за мотивацию,
+                      | познавательные лекции, эффективные тренировки, за поддержку во всём!"
+                    .button.point(data-toggle="modal" data-target="#kupriyanovaResults") Смотреть до/после
                 // ===========================================
-            a.carousel-control-prev(href="#carouselFame" role="button" data-slide="prev")
+            a.carousel-control-prev.fameSiema-prev(href="#carouselFame" role="button" data-slide="prev")
               svg.slider-arr(viewBox="0 0 129 129")
                 g
                   path(d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z")
               span.sr-only Previous
-            a.carousel-control-next(href="#carouselFame" role="button" data-slide="next")
+            a.carousel-control-next.fameSiema-next(href="#carouselFame" role="button" data-slide="next")
               svg.slider-arr(viewBox="0 0 129 129")
                 g
                   path(d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z")

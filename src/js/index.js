@@ -32,6 +32,13 @@ function ready() {
   document.querySelector('.reviewSiema-prev').addEventListener('click', () => reviewSiema.prev());
   document.querySelector('.reviewSiema-next').addEventListener('click', () => reviewSiema.next());
 
+  const fameSiema = new Siema({
+    selector: '.fameSiema',
+    loop: true
+  });
+  document.querySelector('.fameSiema-prev').addEventListener('click', () => fameSiema.prev());
+  document.querySelector('.fameSiema-next').addEventListener('click', () => fameSiema.next());
+
 
 
 
