@@ -21,9 +21,23 @@ function ready() {
     },
     loop: true
   });
-
   document.querySelector('.news-prev').addEventListener('click', () => newsSiema.prev());
   document.querySelector('.news-next').addEventListener('click', () => newsSiema.next());
+
+
+  const reviewSiema = new Siema({
+    selector: '.reviewSiema',
+    loop: true
+  });
+  document.querySelector('.reviewSiema-prev').addEventListener('click', () => reviewSiema.prev());
+  document.querySelector('.reviewSiema-next').addEventListener('click', () => reviewSiema.next());
+
+
+
+
+
+
+
 
   const showMore = document.querySelector('.show-more');
   if (showMore) {

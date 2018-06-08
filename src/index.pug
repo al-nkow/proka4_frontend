@@ -151,7 +151,7 @@ html
                     .benefits-block.style2
                       .ben-title Индивидуальный<br/> подход
                       .ben-img-wrap
-                        .ben-img(style="background-image: url(" + require("./img/ben2.jpg") + ")")
+                        .ben-img(style="background-image: url(" + require("./img/ben21.jpg") + ")")
                     .ben-notice Подберём программу питания и тренировок с учетом твоих индивидуальных особенностей
                 .col-md-6.col-lg-4
                   .benefit
@@ -317,7 +317,7 @@ html
                   .map-label__title США
                 .map-label.canada
                   .map-label__title Канада
-    // =============== MAP BLOCK ===============
+    // =============== REVIEW ===============
     .reviews
       .container
         .reviews-head
@@ -328,26 +328,47 @@ html
         .reviews-slider-wrap
           img.iphone(src=require("./img/iphone.png"))
           .reviews-slider
-            div(id="carouselReviews" class="carousel slide" data-ride="carousel" data-interval="false")
-              .carousel-inner
-                .instaSlide.carousel-item.active
-                  a(href="https://www.instagram.com/p/BTMlJsPgP9r/?r=wa1" target="_blank")
-                    img.d-block.w-100(src=require("./img/instaReview1.jpg"))
-                .instaSlide.carousel-item
-                  a(href="https://www.instagram.com/p/BUKhuSjFYjM/?r=wa1" target="_blank")
-                    img.d-block.w-100(src=require("./img/instaReview2.jpg"))
-            a.carousel-control-prev(href="#carouselReviews" role="button" data-slide="prev")
+            .reviewSiema
+              .instaSlide
+                a(href="https://www.instagram.com/p/BTMlJsPgP9r/?r=wa1" target="_blank")
+                  img.d-block.w-100(src=require("./img/instaReview1.jpg"))
+              .instaSlide
+                a(href="https://www.instagram.com/p/BUKhuSjFYjM/?r=wa1" target="_blank")
+                  img.d-block.w-100(src=require("./img/instaReview2.jpg"))
+
+
+
+            a.carousel-control-prev.reviewSiema-prev(href="#carouselReviews" role="button" data-slide="prev")
               svg.slider-arr(viewBox="0 0 129 129")
                 g
                   path(d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z")
               span.sr-only Previous
-            a.carousel-control-next(href="#carouselReviews" role="button" data-slide="next")
+            a.carousel-control-next.reviewSiema-next(href="#carouselReviews" role="button" data-slide="next")
               svg.slider-arr(viewBox="0 0 129 129")
                 g
                   path(d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z")
               span.sr-only Next
+          //.reviews-slider
+          //  div(id="carouselReviews" class="carousel slide" data-ride="carousel" data-interval="false")
+          //    .carousel-inner
+          //      .instaSlide.carousel-item.active
+          //        a(href="https://www.instagram.com/p/BTMlJsPgP9r/?r=wa1" target="_blank")
+          //          img.d-block.w-100(src=require("./img/instaReview1.jpg"))
+          //      .instaSlide.carousel-item
+          //        a(href="https://www.instagram.com/p/BUKhuSjFYjM/?r=wa1" target="_blank")
+          //          img.d-block.w-100(src=require("./img/instaReview2.jpg"))
+          //  a.carousel-control-prev(href="#carouselReviews" role="button" data-slide="prev")
+          //    svg.slider-arr(viewBox="0 0 129 129")
+          //      g
+          //        path(d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z")
+          //    span.sr-only Previous
+          //  a.carousel-control-next(href="#carouselReviews" role="button" data-slide="next")
+          //    svg.slider-arr(viewBox="0 0 129 129")
+          //      g
+          //        path(d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z")
+          //    span.sr-only Next
 
-    // =============== MAP BLOCK ===============
+    // =============== PARTNERS ===============
     .white-block
       include tmps/wave
       .container
@@ -557,6 +578,16 @@ html
           .block-head-divider
           .news-slider
             .news-wrap.newsSiema
+              a.news-item(href="https://www.instagram.com/p/BjKCRARlL68/?utm_source=ig_share_sheet&igshid=24hix61ac3w1&r=wa1" target="_blank")
+                img(src=require("./img/news5.jpg"))
+                .news-body
+                  .news-date 08 июня 2018, 17:16
+                  .news-title Семинар PROкачSHOW в Таллине
+              a.news-item(href="https://www.instagram.com/p/BjutSqJjEAX/?utm_source=ig_share_sheet&igshid=7zi4h7eiftu7&r=wa1" target="_blank")
+                img(src=require("./img/news6.jpg"))
+                .news-body
+                  .news-date 08 июня 2018, 15:48
+                  .news-title Бесплатная тренировка в Санкт-Петербурге с командой PROкачSHOW
               a.news-item(href="https://www.instagram.com/p/BjaMOErl741/?r=wa1" target="_blank")
                 img(src=require("./img/news1.jpg"))
                 .news-body
