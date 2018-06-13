@@ -16,7 +16,7 @@ function ready() {
     selector: '.newsSiema',
     perPage: {
       400: 1,
-      800: 2,
+      600: 2,
       1240: 3
     },
     loop: true
@@ -34,7 +34,8 @@ function ready() {
 
   const fameSiema = new Siema({
     selector: '.fameSiema',
-    loop: true
+    loop: true,
+    duration: 500,
   });
   document.querySelector('.fameSiema-prev').addEventListener('click', () => fameSiema.prev());
   document.querySelector('.fameSiema-next').addEventListener('click', () => fameSiema.next());
