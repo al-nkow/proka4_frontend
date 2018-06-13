@@ -186,4 +186,18 @@
       .modal-footer
         span.modal-button.cancel(data-dismiss='modal') Отмена
         span#submitPriceForm.modal-button.confirm.mlm.disabled Оплатить
-
+// ==================================================
+// ==================================================
+.modal.fade(id="letterModal" tabindex="-1" role="dialog" aria-labelledby="letterModalLabel" aria-hidden="true")
+  .modal-dialog.custom-width.modal-dialog-centered(role="document")
+    .modal-content
+      .mod-head
+        .close-but(data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+        h3.text-center Письмо девочке, которая<br/> решила меняться
+        .block-head-divider
+      .mod-body
+        include letter
+      .modal-wave
+        svg(x="0px" y="0px" viewBox="0 0 743 187")
+          path(d="M-506.1,19.8c0,0,78.6-25.9,256-1c177.3,24.9,253.9,3.6,322.1-2  c68.1-5.6,161.2-3,257,17c95.8,20,210.8,30.3,323.1-13c112.3-43.3,178.8-8.8,253.8,11c75,19.8,82.9,19.6,98.1,18  c15.2-1.6,87.5,156.1,87.5,156.1s-1695.1-11.3-1682.9-21C-579.2,175.3-506.1,19.8-506.1,19.8z")
