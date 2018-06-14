@@ -62,19 +62,6 @@ const oldLogic = () => {
     })
   }
 
-  $('#show-results').on('click', function () {
-    $('#myModal').modal('hide');
-    scrollToTarget('#results');
-  });
-
-  $('#more').on('click', function () {
-    $('#myModal').modal('show');
-  });
-
-
-
-
-
   // Click 'Pay' button in user details modal
   $('#submitPriceForm').on('click', function () {
     if (!orderForm.valid) return;
@@ -84,7 +71,7 @@ const oldLogic = () => {
     var email = document.getElementById('pieEmail').value;
     var promo = document.getElementById('piePromo').value;
 
-    var start = '21 мая'
+    var start = '21 мая';
     if (!fname || !lname || !phone) {
       alert('Все поля должны быть заполнены!');
       return false;

@@ -74,4 +74,9 @@ function ready() {
   $('.scrollToPay').on('click', () => scrollToElement('#pay', 1000));
   $('.scrollToActions').on('click', () => scrollToElement('#actions', 1000));
 
+  $('#show-results').on('click', () => {
+    $('#letterModal').modal('hide');
+    scrollToElement('#fame', 1000);
+  });
+
 }

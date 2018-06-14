@@ -203,6 +203,12 @@ p {
   &.custom-width {
     max-width: 1000px;
   }
+  &.letter-width {
+    max-width: 800px;
+    .modal-wave {
+      height: 112px;
+    }
+  }
 }
 .modal-wave {
   position: relative;

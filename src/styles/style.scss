@@ -1017,8 +1017,10 @@
   @include rotate;
   margin: 15px 0 25px 0;
   font-style: normal;
-  font-size: 86px;
-  line-height: 86px;
+  font-size: 74px;
+  line-height: 78px;
+  //font-size: 86px;
+  //line-height: 86px;
   height: 86px;
   font-family: 'Bebas_Neue_Bold', Helvetica, sans-serif;
   color: #ffffff;
@@ -2288,19 +2290,43 @@ iframe.presentation {
       fill: #f65752;
     }
   }
-  @media ($bplg) {
+  @media ($bpmd) {
     display: none;
   }
 }
 .letter {
-  padding: 20px 40px 60px 40px;
+  padding: 20px 40px 0 40px;
+  a {
+    font-weight: 300;
+    font-style: italic;
+    color: #f77a58;
+    text-decoration: none;
+    &:hover {
+      color: #f77a58;
+      text-decoration: underline;
+    }
+    &:active {
+      color: #f77a58;
+    }
+    &:visited {
+      color: #f77a58;
+    }
+  }
+  b {
+    color: #333333;
+    font-weight: 500;
+    font-size: 18px;
+  }
   h3 {
     font-weight: 500;
     margin-bottom: 20px;
+    @media ($bpxs) {
+      font-size: 24px;
+    }
   }
   p {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 26px;
     font-style: italic;
     font-weight: 300;
   }
@@ -2329,4 +2355,80 @@ iframe.presentation {
 }
 .letter-block {
   margin-bottom: 50px;
+}
+.ltr-present {
+  width: 73px;
+  height: 50px;
+  margin: 0 auto 20px;
+  background: url('/img/emodji.png') 0 -12px;
+}
+.h-icon {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('/img/emodji.png');
+  &.hi {
+    background-position: -78px -12px;
+  }
+  &.crown {
+    background-position: -135px -12px;
+  }
+  &.week {
+    background-position: -192px -12px;
+  }
+  &.answ {
+    background-position: -248px -12px;
+  }
+  &.diamond {
+    background-position: -301px -15px;
+    float: left;
+  }
+  &.deviz {
+    background-position: -351px -7px;
+    float: left;
+    width: 54px;
+    height: 59px;
+  }
+  &.inf {
+    background-position: -410px -9px;
+    height: 56px;
+    float: left;
+    margin-bottom: 40px;
+  }
+  &.party {
+    background-position: -461px -9px;
+    height: 56px;
+    float: left;
+  }
+}
+.ltr-link-wrap {
+  margin-bottom: 10px;
+}
+.letter-button-wrap {
+  text-align: center;
+  margin-bottom: -48px;
+  position: relative;
+  z-index: 2;
+}
+.best-wrap {
+  text-align: center;
+  padding: 20px;
+}
+.best {
+  border-radius: 4px;
+  max-width: 60%;
+  display: inline-block;
+  @media ($bpmd) {
+    max-width: 70%;
+  }
+  @media ($bpsm) {
+    max-width: 100%;
+  }
+}
+.best-notice {
+  font-weight: 500;
+  color: #333333;
+  margin: 10px 0;
 }

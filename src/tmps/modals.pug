@@ -189,11 +189,12 @@
 // ==================================================
 // ==================================================
 .modal.fade(id="letterModal" tabindex="-1" role="dialog" aria-labelledby="letterModalLabel" aria-hidden="true")
-  .modal-dialog.custom-width.modal-dialog-centered(role="document")
+  .modal-dialog.letter-width.modal-dialog-centered(role="document")
     .modal-content
       .mod-head
         .close-but(data-dismiss="modal" aria-label="Close")
           span(aria-hidden="true") &times;
+        div.ltr-present
         h3.text-center Письмо девочке, которая<br/> решила меняться
         .block-head-divider
       .mod-body
