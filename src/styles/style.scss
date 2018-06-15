@@ -60,11 +60,11 @@
 // ======= NAVIGATION =======
 .mob-logo-img {
   display: none;
-  width: 60px;
-  height: 60px;
+  width: 54px;
+  height: 54px;
   position: absolute;
-  top: 20px;
-  left: 10px;
+  top: 15px;
+  left: 5px;
   @media ($bpxs) {
     display: block;
   }
@@ -2360,7 +2360,7 @@ iframe.presentation {
   width: 73px;
   height: 50px;
   margin: 0 auto 20px;
-  background: url('/img/emodji.png') 0 -12px;
+  background: url('../img/emodji.png') 0 -12px;
 }
 .h-icon {
   margin-right: 10px;
@@ -2368,7 +2368,7 @@ iframe.presentation {
   height: 50px;
   display: inline-block;
   vertical-align: middle;
-  background-image: url('/img/emodji.png');
+  background-image: url('../img/emodji.png');
   &.hi {
     background-position: -78px -12px;
   }
@@ -2402,6 +2402,9 @@ iframe.presentation {
     height: 56px;
     float: left;
   }
+  @media ($bpxs) {
+    display: none;
+  }
 }
 .ltr-link-wrap {
   margin-bottom: 10px;
@@ -2431,4 +2434,13 @@ iframe.presentation {
   font-weight: 500;
   color: #333333;
   margin: 10px 0;
+}
+
+
+
+
+.fame-modal-slider-wrap {
+  width: 600px;
+  height: 600px;
+  border: 1px solid red;
 }

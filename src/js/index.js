@@ -4,10 +4,15 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/style.scss';
 import 'ubuntu-fontface/_ubuntu.scss'
 import $ from 'jquery';
-// import '../docs/offer.pdf';
-// import '../docs/policy.pdf';
-
 import Siema from 'siema';
+
+
+// $(window).on("load", () => {
+//   setTimeout(() => {
+//     $('.full-wrap').addClass('visible');
+//   }, 2500);
+// });
+
 
 document.addEventListener('DOMContentLoaded', ready);
 function ready() {
@@ -23,6 +28,21 @@ function ready() {
   });
   document.querySelector('.news-prev').addEventListener('click', () => newsSiema.prev());
   document.querySelector('.news-next').addEventListener('click', () => newsSiema.next());
+
+  // const fameSiema1 = new Siema({
+  //   selector: '.fameSiema1',
+  //   loop: true
+  // });
+  // document.querySelector('#fameSiema1-prev').addEventListener('click', () => fameSiema1.prev());
+  // document.querySelector('#fameSiema1-next').addEventListener('click', () => fameSiema1.next());
+
+
+
+
+
+
+
+
 
 
   const reviewSiema = new Siema({
@@ -40,13 +60,6 @@ function ready() {
   document.querySelector('.fameSiema-prev').addEventListener('click', () => fameSiema.prev());
   document.querySelector('.fameSiema-next').addEventListener('click', () => fameSiema.next());
 
-
-
-
-
-
-
-
   const showMore = document.querySelector('.show-more');
   if (showMore) {
     showMore.addEventListener('click', () => {
@@ -60,7 +73,6 @@ function ready() {
   const yearBlock = document.getElementById('currentYear');
   const date = new Date().getFullYear();
   yearBlock.innerText = date;
-
 
   const scrollToElement = (id, duration) => {
     $('html, body').animate({
@@ -77,6 +89,21 @@ function ready() {
   $('#show-results').on('click', () => {
     $('#letterModal').modal('hide');
     scrollToElement('#fame', 1000);
+  });
+
+  // stop youtube iframe video
+  $('.videoModalClose').on('click', () => {
+    $('.youtube_player_iframe').each(function(){
+      this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+    });
+  });
+
+  $('#mobMenuButton').on('click', () => {
+    $('#mobMenu').toggleClass('visible');
+  });
+
+  $('.jsMobMenuItem').on('click', () => {
+    $('#mobMenu').toggleClass('visible');
   });
 
 }

@@ -119,10 +119,11 @@
     .modal-content
       .mod-body
         .video-wrap
-          .close-but(data-dismiss="modal" aria-label="Close")
+          //.close-but(data-dismiss="modal" aria-label="Close")
+          .close-but.videoModalClose(data-dismiss="modal" aria-label="Close")
             span(aria-hidden="true") &times;
-          iframe.presentation(
-            src="https://www.youtube.com/embed/ouOa16XjboU?rel=0&amp;showinfo=0"
+          iframe.presentation.youtube_player_iframe(
+            src="https://www.youtube.com/embed/ouOa16XjboU?enablejsapi=1&rel=0&amp;showinfo=0"
             frameborder="0"
             allow="autoplay; encrypted-media"
             allowfullscreen

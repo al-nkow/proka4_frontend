@@ -1,4 +1,3 @@
-// import Siema from 'siema';
 import $ from 'jquery';
 
 const oldLogic = () => {
@@ -34,20 +33,18 @@ const oldLogic = () => {
   //
   // initSlider();
 
-  // var ipay = new IPAY({api_token: '7uv1cmsuead84hs43g8qcpdghp'});
-  var ipay = new IPAY({api_token: '5dq10g9edj12prahqnlmota77e'});
-  // var ipay = new Object;
+  const ipay = new IPAY({api_token: '5dq10g9edj12prahqnlmota77e'});
 
-  var price = 0;
-  var program = '';
-  var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  let price = 0;
+  let program = '';
+  let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
-  var orderForm = {
+  let orderForm = {
     fname: {valid: false},
     lname: {valid: false},
     phone: {valid: false},
     email: {valid: false}
-  }
+  };
 
   $('.priceBtn').on('click', function (e) {
     price = e.target.getAttribute('data-price');
@@ -65,22 +62,22 @@ const oldLogic = () => {
   // Click 'Pay' button in user details modal
   $('#submitPriceForm').on('click', function () {
     if (!orderForm.valid) return;
-    var fname = document.getElementById('pieFirstName').value;
-    var lname = document.getElementById('pieLastName').value;
-    var phone = document.getElementById('piePhone').value;
-    var email = document.getElementById('pieEmail').value;
-    var promo = document.getElementById('piePromo').value;
+    let fname = document.getElementById('pieFirstName').value;
+    let lname = document.getElementById('pieLastName').value;
+    let phone = document.getElementById('piePhone').value;
+    let email = document.getElementById('pieEmail').value;
+    let promo = document.getElementById('piePromo').value;
 
-    var start = '21 мая';
+    let start = '21 мая';
     if (!fname || !lname || !phone) {
       alert('Все поля должны быть заполнены!');
       return false;
     }
-    var description = 'Программа "' + program + '" ' + price + 'руб. 10 сезон. ' +
+    let description = 'Программа "' + program + '" ' + price + 'руб. 10 сезон. ' +
       'Участница: ' + fname + ' ' + lname + ', тел.' + phone + ', email: ' + email;
     if (promo) description = description + ', промокод: ' + promo;
 
-    var payControls = {
+    let payControls = {
       amount: price,
       currency: 'RUB',
       order_number: '',
@@ -88,21 +85,17 @@ const oldLogic = () => {
     };
 
     $('#priceModal').modal('hide');
-    var cbSuccess = function (order) {
+    let cbSuccess = function (order) {
       console.log('Оплата прошла успешно: ', order);
-    }
-    var cbError = function (order) {
+    };
+    let cbError = function (order) {
       console.log('ERROR: ', order);
-    }
+    };
     ipayCheckout(payControls, cbSuccess, cbError);
   });
 
-
-
-
-
   // ======= VALIDATION ============
-  var checkFormValidity = function () {
+  let checkFormValidity = function () {
     orderForm.valid = orderForm.fname.valid && orderForm.lname.valid
       && orderForm.phone.valid && orderForm.email.valid && $('#pieOffer')[0].checked;
     if (orderForm.valid) {
@@ -110,9 +103,9 @@ const oldLogic = () => {
     } else {
       $('#submitPriceForm').addClass('disabled');
     }
-  }
-  var changeInputHandler = function (e, regexp, name) {
-    var value = e.target.value;
+  };
+  let changeInputHandler = function (e, regexp, name) {
+    let value = e.target.value;
     orderForm[name].valid = regexp.test(value);
     if (orderForm[name].valid) {
       $(this).removeClass('error');
@@ -139,11 +132,11 @@ const oldLogic = () => {
   // ======= eof VALIDATION ============
 
   function openPayWin() {
-    var url = window.location.href;
-    var urlArr = url.split('?');
+    let url = window.location.href;
+    let urlArr = url.split('?');
     if (!urlArr[1]) return;
-    var params = {};
-    var arrParams = urlArr[1].slice(0).split('&');
+    let params = {};
+    let arrParams = urlArr[1].slice(0).split('&');
     arrParams.forEach(function (item) {
       var arrItem = item.split('=');
       params[arrItem[0]] = arrItem[1]
@@ -159,7 +152,7 @@ const oldLogic = () => {
 
   openPayWin();
 
-}
+};
 
 
 export default oldLogic;
