@@ -35,6 +35,8 @@
   },
   "dependencies": {
     "bootstrap": "^4.1.1",
+    "dotenv-webpack": "^1.5.7",
+    "instafeed.js": "^1.4.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3",
     "siema": "^1.5.1",

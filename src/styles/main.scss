@@ -323,5 +323,34 @@ p {
   font-weight: 300;
   display: inline-block;
 }
+.insta-wrap {
+  overflow: hidden;
+  width: 100%;
+  max-width: 280px;
+  margin-top: 10px;
+  @media ($bpmd) {
+    margin: 10px auto 0 auto;
+  }
+}
+.insta-link {
+  cursor: pointer;
+  position: relative;
+  margin: 1px;
+  padding-top: 32%;
+  background-size: cover;
+  display: block;
+  float: left;
+  width: 32%;
+  overflow: hidden;
+  &:hover {
+    opacity: 0.8;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
 
 

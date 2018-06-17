@@ -1655,6 +1655,10 @@
   .block-head-divider {
     background: #fe5d4b;
   }
+  .sub-title {
+    color: #a6a6a6;
+    font-weight: 300;
+  }
 }
 .programs {
   margin-top: 60px;
@@ -1731,6 +1735,39 @@
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.program-info-link {
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  padding: 5px;
+  color: #a6a6a6;
+  font-size: 14px;
+  font-weight: 300;
+  width: 130px;
+  margin: 5px auto -15px auto;
+  text-align: center;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.pay-methods-modal {
+  padding: 20px 20px 90px 20px;
+}
+.pay-logo-block {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  img {
+    height: 50px;
+  }
+  @media ($bpsm) {
+    display: block;
+    img {
+      margin: 20px;
+    }
+  }
 }
 // ======= FAME =======
 .fame-block {
@@ -2254,6 +2291,7 @@ iframe.presentation {
 }
 // ======= LETTER =======
 .letterBut {
+  z-index:1;
   cursor: pointer;
   position: absolute;
   top: 30px;
@@ -2435,12 +2473,25 @@ iframe.presentation {
   color: #333333;
   margin: 10px 0;
 }
-
-
-
-
+// ===========================
 .fame-modal-slider-wrap {
   width: 600px;
   height: 600px;
   border: 1px solid red;
+}
+.q-but-icon {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+  vertical-align: middle;
+  display: inline-block;
+  margin: -10px 15px -5px -11px;
+  &_mail {
+    width: 26px;
+    height: 26px;
+    margin-top: -7px;
+  }
+  @media ($bpxs) {
+    display: none;
+  }
 }
