@@ -20,10 +20,16 @@ const Listeners = () => {
     scrollToElement('#fame', 1000);
   });
 
+  // stop youtube iframe video
   $('.videoModalClose').on('click', () => {
-    $('.youtube_player_iframe').each(() => {
+    $('.youtube_player_iframe').each(function() {
       this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
     });
+  });
+
+  $('.show-more').on('click', function() {
+    $('.rest-of-faq').addClass('visible');
+    $(this).addClass('hidden');
   });
 
   $('.jsMobMenuItem').on('click', () => $('#mobMenu').toggleClass('visible'));

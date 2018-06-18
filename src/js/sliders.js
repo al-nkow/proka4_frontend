@@ -1,4 +1,5 @@
 import Siema from 'siema';
+import $ from 'jquery';
 
 const Sliders = () => {
   const newsSiema = new Siema({
@@ -10,23 +11,23 @@ const Sliders = () => {
     },
     loop: true
   });
-  document.querySelector('.news-prev').addEventListener('click', () => newsSiema.prev());
-  document.querySelector('.news-next').addEventListener('click', () => newsSiema.next());
+  $('.news-prev').on('click', () => newsSiema.prev());
+  $('.news-next').on('click', () => newsSiema.next());
 
   const reviewSiema = new Siema({
     selector: '.reviewSiema',
     loop: true
   });
-  document.querySelector('.reviewSiema-prev').addEventListener('click', () => reviewSiema.prev());
-  document.querySelector('.reviewSiema-next').addEventListener('click', () => reviewSiema.next());
+  $('.reviewSiema-prev').on('click', () => reviewSiema.prev());
+  $('.reviewSiema-next').on('click', () => reviewSiema.next());
 
   const fameSiema = new Siema({
     selector: '.fameSiema',
     loop: true,
     duration: 500,
   });
-  document.querySelector('.fameSiema-prev').addEventListener('click', () => fameSiema.prev());
-  document.querySelector('.fameSiema-next').addEventListener('click', () => fameSiema.next());
+  $('.fameSiema-prev').on('click', () => fameSiema.prev());
+  $('.fameSiema-next').on('click', () => fameSiema.next());
 };
 
 export default Sliders;

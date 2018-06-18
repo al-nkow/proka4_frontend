@@ -254,16 +254,16 @@ p {
   }
 }
 // ============== MOB MENU ==============
-.full-wrap {
-  //display: none;
-  //&.visible {
-  //  display: block
-  //}
-  @media ($bpxs) {
-    overflow: hidden;
-    position: relative;
-  }
-}
+//.full-wrap {
+//  display: none;
+//  &.visible {
+//    display: block
+//  }
+//  @media ($bpxs) {
+//    overflow: hidden;
+//    position: relative;
+//  }
+//}
 .mob-menu-button {
   z-index: 11;
   display: none;

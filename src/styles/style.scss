@@ -544,6 +544,7 @@
   }
 }
 .about-prize {
+  width: 352px; // safari bug
   @include rotate;
   text-align: left;
   position: absolute;
@@ -552,6 +553,9 @@
   bottom: -37px;
   right: 0;
   box-shadow: 0 0 59px 8px rgba( 255, 121, 87, 0.2 );
+  @media ($bpmd) {
+    width: auto;
+  }
   @media (max-width: 400px) {
     padding: 12px 30px;
   }
@@ -861,10 +865,10 @@
   border-radius: 50%;
   background-size: cover;
   background-position: center;
-  background-image: url('../img/ben-a2.jpg');
 }
 .ben-animate {
   animation-name: benbackground;
+  animation-delay: -1s;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -1624,6 +1628,7 @@
     line-height: 110px;
     margin-right: 10px;
     background: linear-gradient( 22deg, rgb(250,127,76) 0%, rgb(251,51,96) 100%);
+    -moz-background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #fb3f5d;
@@ -2329,6 +2334,12 @@ iframe.presentation {
     }
   }
   @media ($bpmd) {
+    display: none;
+  }
+  @media ($bpsm) {
+    display: flex;
+  }
+  @media ($bpxs) {
     display: none;
   }
 }
