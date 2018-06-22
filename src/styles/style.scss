@@ -868,12 +868,13 @@
 }
 .ben-animate {
   animation-name: benbackground;
-  animation-delay: -1s;
+  //animation-delay: 1s;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  -webkit-animation: benbackground 10s linear infinite;
-  -webkit-animation-fill-mode: forwards;
+  //-webkit-animation: benbackground 10s linear infinite;
+  //-webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
 }
 .ben-notice {
   position: relative;
@@ -1413,6 +1414,20 @@
   left: 15%;
 }
 // ======= REVIEWS =======
+.reviewReadMore {
+  background: #fafafa;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 20px;
+  text-decoration: none;
+  color: #b5b5b5;
+  &:hover {
+    text-decoration: none;
+    span {
+      border-bottom: 1px solid #b5b5b5;
+    }
+  }
+}
 .reviews {
   min-height: 700px;
   background: url('../img/teachersbg.jpg') center;
@@ -1423,6 +1438,9 @@
   position: relative;
   @media ($bpxs) {
     padding-top: 60px;
+  }
+  a {
+    text-decoration: none;
   }
 }
 .block-head-divider {
@@ -1476,8 +1494,15 @@
   width: 100%;
 }
 .instaSlide {
+  position: relative;
   overflow: auto;
   height: 100%;
+}
+.insta-slide-video {
+  width: 100%;
+  position: absolute;
+  top: 43px;
+  left: 0;
 }
 .reviewSiema {
   height: 100%;
@@ -1490,10 +1515,10 @@
 }
 .reviews-slider {
   position: absolute;
-  width: 275px;
+  width: 277px;
   height: 470px;
   top: 97px;
-  left: 22px;
+  left: 21px;
   .carousel {
     height: 100%;
     .carousel-inner {

@@ -15,4 +15,5 @@ TODO:
 3. gzip, service workers, preloader
 4. add animation css3 effects
 5. Menu - close on swipe
+6. Disable hash main.sh45bekwjwerj453.css
 ````
