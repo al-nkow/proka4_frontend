@@ -7,11 +7,13 @@ import Instafeed from 'instafeed.js';
 import Payment from './payment';
 import Sliders from './sliders';
 import Listeners from './listeners';
+import Reviews from './reviews';
 
 $(function() {
   Sliders();
   Listeners();
   Payment();
+  Reviews();
 
   $('#currentYear').text(new Date().getFullYear());
 

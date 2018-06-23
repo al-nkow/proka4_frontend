@@ -14,12 +14,14 @@ const Sliders = () => {
   $('.news-prev').on('click', () => newsSiema.prev());
   $('.news-next').on('click', () => newsSiema.next());
 
-  const reviewSiema = new Siema({
-    selector: '.reviewSiema',
-    loop: true
-  });
-  $('.reviewSiema-prev').on('click', () => reviewSiema.prev());
-  $('.reviewSiema-next').on('click', () => reviewSiema.next());
+  setTimeout(() => {
+    const reviewSiema = new Siema({
+      selector: '.reviewSiema',
+      loop: true
+    });
+    $('.reviewSiema-prev').on('click', () => reviewSiema.prev());
+    $('.reviewSiema-next').on('click', () => reviewSiema.next());
+  }, 500); // need due to SIEMA bug - cannot paste innerHTML into last slide
 
   const fameSiema = new Siema({
     selector: '.fameSiema',

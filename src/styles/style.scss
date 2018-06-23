@@ -1504,7 +1504,17 @@
   top: 43px;
   left: 0;
 }
+.r-comments {
+  background: #fafafa;
+  font-size: 14px;
+  color: #333333;
+}
+.comment-item {
+  font-size: 11px;
+  padding: 5px 13px;
+}
 .reviewSiema {
+  overflow: hidden;
   height: 100%;
   > div {
     height: 100%;
