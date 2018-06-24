@@ -1498,11 +1498,58 @@
   overflow: auto;
   height: 100%;
 }
-.insta-slide-video {
+.insta-slide-video-wrap {
   width: 100%;
   position: absolute;
   top: 43px;
   left: 0;
+}
+.play-but {
+  z-index: 1;
+  cursor: pointer;
+  position: absolute;
+  background: rgba(255,255,255,0.5);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &:hover {
+    background: rgba(255,255,255,0.8);
+  }
+  &:before {
+    content: '';
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    border-top: 10px solid transparent;
+    border-left: 15px solid #333333;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &.pause {
+    &:before {
+      display: none;
+    }
+    &:after {
+      content: '';
+      width: 12px;
+      height: 15px;
+      border-left: 4px solid #333333;
+      border-right: 4px solid #333333;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+.insta-slide-video {
+  width: 100%;
 }
 .r-comments {
   background: #fafafa;
@@ -1810,6 +1857,11 @@
   }
 }
 // ======= FAME =======
+.fame-alone {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
 .fame-block {
   padding: 260px 0 100px 0;
   .block-head-divider {

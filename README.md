@@ -10,7 +10,6 @@ npm run build
 
 ````
 TODO:
-1. Full transformation block changing background bug
 2. Slider before/after - add ability to swipe (change slider to Siema)
 3. gzip, service workers, preloader
 4. add animation css3 effects

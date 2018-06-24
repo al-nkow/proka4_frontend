@@ -408,7 +408,14 @@ html
                     img.d-block.w-100(src=require("./img/instaReview10.jpg"))
                     .reviewReadMore
                       span Читать все комментарии
-                  video.insta-slide-video(playsinline="" controls="controls" poster="https://instagram.fhen2-1.fna.fbcdn.net/vp/8acdc3711b5282c6197ab9b33d8d52b4/5B303045/t51.2885-15/e35/28765987_597557660578865_556789355411144704_n.jpg" preload="none" src="https://instagram.fhen2-1.fna.fbcdn.net/vp/d0928ec6d0fe28e2406afd7312e8f6e4/5B301C39/t50.2886-16/29148530_557331491317796_2831705081614225189_n.mp4" type="video/mp4")
+                  .insta-slide-video-wrap#insta-video-wrap
+                    .play-but#play-pause
+                    video.insta-slide-video#insta-video(
+                      poster="https://instagram.fhen2-1.fna.fbcdn.net/vp/8acdc3711b5282c6197ab9b33d8d52b4/5B303045/t51.2885-15/e35/28765987_597557660578865_556789355411144704_n.jpg"
+                      preload="none"
+                      src="https://instagram.fhen2-1.fna.fbcdn.net/vp/d0928ec6d0fe28e2406afd7312e8f6e4/5B301C39/t50.2886-16/29148530_557331491317796_2831705081614225189_n.mp4"
+                      type="video/mp4"
+                      )
                 // 7 season
                 .instaSlide
                   a(href="https://www.instagram.com/p/BbthtfVj4NK/" target="_blank")
