@@ -45,6 +45,18 @@ const Reviews = () => {
   }
 
   seasons.forEach(season => getComments(accessToken, season.mediaId, season.container));
+
+  // video info:
+  // fetch('https://api.instagram.com/oembed?url=https://www.instagram.com/p/BglmQOjFf24/?utm_source=ig_share_sheet&igshid=1e3b0llcw69in&r=wa1')
+  //   .then((resp) => resp.json())
+  //   .then((data) => {
+  //     console.log('data >>>', data);
+  //   })
+  //   .catch((error) => {
+  //     console.log('GET VIDEO POST ERROR:', error);
+  //   });
+
+
 };
 
 export default Reviews;

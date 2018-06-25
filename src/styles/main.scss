@@ -81,6 +81,10 @@ p {
       background-image: -webkit-linear-gradient( 180deg, rgb(254,128,69) 0%, rgb(255,138,83) 50%, rgb(255,147,97) 100%);
       background-image: -ms-linear-gradient( 180deg, rgb(254,128,69) 0%, rgb(255,138,83) 50%, rgb(255,147,97) 100%);
     }
+    @media ($bpxs) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
   }
   &.point {
     transition: none;
