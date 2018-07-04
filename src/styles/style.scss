@@ -191,9 +191,24 @@
 }
 // ======= MAIN =======
 .main {
-  background: url('../img/back.jpg') top center;
+  position: relative;
+  //background: url('../img/back.jpg') top center;
   background-size: cover;
   overflow: hidden;
+  background: -webkit-linear-gradient(6deg, rgb(240, 91, 69) 0%, rgb(246, 124, 113) 50%, rgb(243, 113, 99) 100%);
+  background: -o-linear-gradient(6deg, rgb(240, 91, 69) 0%, rgb(246, 124, 113) 50%, rgb(243, 113, 99) 100%);
+  background: -ms-linear-gradient(6deg, rgb(240, 91, 69) 0%, rgb(246, 124, 113) 50%, rgb(243, 113, 99) 100%);
+  background: -moz-linear-gradient(6deg, rgb(240, 91, 69) 0%, rgb(246, 124, 113) 50%, rgb(243, 113, 99) 100%);
+  background: linear-gradient(84deg, rgb(240, 91, 69) 0%, rgb(246, 124, 113) 50%, rgb(243, 113, 99) 100%);
+}
+.main-lines {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: url('../img/main-lines.png') no-repeat;
+  background-size: 100%;
 }
 .main-wrapper {
   height: 780px;
@@ -261,6 +276,8 @@
   }
 }
 .company-name {
+  width: 540px;
+  text-align: center;
   display: inline-block;
   margin-bottom: 26px;
   position: relative;
@@ -297,6 +314,7 @@
     margin-left: -1px;
   }
   @media ($bplg) {
+    width: 436px;
     font-size: 99px;
     line-height: 104px;
     height: 126px;
@@ -309,6 +327,7 @@
     }
   }
   @media ($bpmd) {
+    width: 340px;
     font-size: 76px;
     line-height: 84px;
     height: 106px;
@@ -320,6 +339,7 @@
     }
   }
   @media ($bpxs) {
+    width: auto;
     font-size: 60px;
     line-height: 65px;
     height: 88px;
@@ -1112,8 +1132,13 @@
 // ======= PRIZES =======
 .teachers {
   padding: 140px 0 80px 0;
-  background: url('../img/teachersbg.jpg') top center;
-  background-size: cover;
+  //background: url('../img/teachersbg.jpg') top center;
+  //background-size: cover;
+  background: -webkit-linear-gradient(356deg, rgb(244, 99, 82) 0%, rgb(246, 120, 106) 66%, rgb(246, 120, 106) 100%);
+  background: -o-linear-gradient(356deg, rgb(244, 99, 82) 0%, rgb(246, 120, 106) 66%, rgb(246, 120, 106) 100%);
+  background: -ms-linear-gradient(356deg, rgb(244, 99, 82) 0%, rgb(246, 120, 106) 66%, rgb(246, 120, 106) 100%);
+  background: -moz-linear-gradient(356deg, rgb(244, 99, 82) 0%, rgb(246, 120, 106) 66%, rgb(246, 120, 106) 100%);
+  background: linear-gradient(94deg, rgb(244, 99, 82) 0%, rgb(246, 120, 106) 66%, rgb(246, 120, 106) 100%);
   overflow: hidden;
   @media ($bpmd) {
     padding: 100px 0 40px 0;
@@ -1134,6 +1159,7 @@
   flex-direction: row;
   max-width: 876px;
   margin-bottom: 100px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
   @media ($bpsm) {
     flex-direction: column;
     width: 100%;
@@ -1430,8 +1456,13 @@
 }
 .reviews {
   min-height: 700px;
-  background: url('../img/teachersbg.jpg') center;
-  background-size: cover;
+  //background: url('../img/teachersbg.jpg') center;
+  //background-size: cover;
+  background: -webkit-linear-gradient(6deg, rgb(240, 91, 69) 0%, rgb(246, 124, 113) 50%, rgb(243, 113, 99) 100%);
+  background: -o-linear-gradient(6deg, rgb(240, 91, 69) 0%, rgb(246, 124, 113) 50%, rgb(243, 113, 99) 100%);
+  background: -ms-linear-gradient(6deg, rgb(240, 91, 69) 0%, rgb(246, 124, 113) 50%, rgb(243, 113, 99) 100%);
+  background: -moz-linear-gradient(6deg, rgb(240, 91, 69) 0%, rgb(246, 124, 113) 50%, rgb(243, 113, 99) 100%);
+  background: linear-gradient(84deg, rgb(240, 91, 69) 0%, rgb(246, 124, 113) 50%, rgb(243, 113, 99) 100%);
   padding: 140px 0 0 0;
   color: #ffffff;
   margin-bottom: -175px;

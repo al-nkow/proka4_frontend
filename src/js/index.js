@@ -10,6 +10,10 @@ import Listeners from './listeners';
 import Reviews from './reviews';
 
 $(function() {
+
+  $('.full-wrap').removeClass('hidden');
+  $('.preloader').addClass('hidden');
+
   Sliders();
   Listeners();
   Payment();

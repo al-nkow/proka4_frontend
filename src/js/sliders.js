@@ -17,11 +17,17 @@ const Sliders = () => {
   setTimeout(() => {
     const reviewSiema = new Siema({
       selector: '.reviewSiema',
-      loop: true
+      loop: true,
+      onChange: () => {
+        if ([3, 5].indexOf(reviewSiema.currentSlide) !== -1) {
+          const video = document.getElementById('insta-video');
+          if (video) video.pause();
+        }
+      },
     });
     $('.reviewSiema-prev').on('click', () => reviewSiema.prev());
     $('.reviewSiema-next').on('click', () => reviewSiema.next());
-  }, 500); // need due to SIEMA bug - cannot paste innerHTML into last slide
+  }, 1000); // need due to SIEMA bug - cannot paste innerHTML into last slide
 
   const fameSiema = new Siema({
     selector: '.fameSiema',
